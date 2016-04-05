@@ -86,10 +86,6 @@
 		D9358FB91CB354C100B59E4C /* AddTextTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D9358EF41CB354C100B59E4C /* AddTextTableViewCell.m */; };
 		D9358FBA1CB354C100B59E4C /* AddTextTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9358EF51CB354C100B59E4C /* AddTextTableViewCell.xib */; };
 		D9358FBB1CB354C100B59E4C /* AddTextTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9358EF51CB354C100B59E4C /* AddTextTableViewCell.xib */; };
-		D9358FBC1CB354C100B59E4C /* BookMarkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9358EF91CB354C100B59E4C /* BookMarkViewController.m */; };
-		D9358FBD1CB354C100B59E4C /* BookMarkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9358EF91CB354C100B59E4C /* BookMarkViewController.m */; };
-		D9358FBE1CB354C100B59E4C /* BookMarkViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9358EFA1CB354C100B59E4C /* BookMarkViewController.xib */; };
-		D9358FBF1CB354C100B59E4C /* BookMarkViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9358EFA1CB354C100B59E4C /* BookMarkViewController.xib */; };
 		D9358FC01CB354C100B59E4C /* CropImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9358EFD1CB354C100B59E4C /* CropImageViewController.m */; };
 		D9358FC11CB354C100B59E4C /* CropImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9358EFD1CB354C100B59E4C /* CropImageViewController.m */; };
 		D9358FC21CB354C100B59E4C /* CropImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9358EFE1CB354C100B59E4C /* CropImageViewController.xib */; };
@@ -335,9 +331,6 @@
 		D9358EF31CB354C100B59E4C /* AddTextTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddTextTableViewCell.h; sourceTree = "<group>"; };
 		D9358EF41CB354C100B59E4C /* AddTextTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddTextTableViewCell.m; sourceTree = "<group>"; };
 		D9358EF51CB354C100B59E4C /* AddTextTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddTextTableViewCell.xib; sourceTree = "<group>"; };
-		D9358EF81CB354C100B59E4C /* BookMarkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookMarkViewController.h; sourceTree = "<group>"; };
-		D9358EF91CB354C100B59E4C /* BookMarkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookMarkViewController.m; sourceTree = "<group>"; };
-		D9358EFA1CB354C100B59E4C /* BookMarkViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookMarkViewController.xib; sourceTree = "<group>"; };
 		D9358EFC1CB354C100B59E4C /* CropImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CropImageViewController.h; sourceTree = "<group>"; };
 		D9358EFD1CB354C100B59E4C /* CropImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CropImageViewController.m; sourceTree = "<group>"; };
 		D9358EFE1CB354C100B59E4C /* CropImageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CropImageViewController.xib; sourceTree = "<group>"; };
@@ -677,7 +670,6 @@
 				D9358F0D1CB354C100B59E4C /* SideBarController */,
 				D95202F71CB3655200526801 /* CategoryViewController */,
 				D9358EEE1CB354C100B59E4C /* AddImageTextViewController */,
-				D9358EF71CB354C100B59E4C /* BookMarkViewController */,
 				D9358EFB1CB354C100B59E4C /* CropImageViewController */,
 				D9358EFF1CB354C100B59E4C /* CustomNavigationBar */,
 				D9358F041CB354C100B59E4C /* InfoViewController */,
@@ -716,16 +708,6 @@
 				D93590281CB354DE00B59E4C /* BaseViewController.xib */,
 			);
 			path = BaseViewController;
-			sourceTree = "<group>";
-		};
-		D9358EF71CB354C100B59E4C /* BookMarkViewController */ = {
-			isa = PBXGroup;
-			children = (
-				D9358EF81CB354C100B59E4C /* BookMarkViewController.h */,
-				D9358EF91CB354C100B59E4C /* BookMarkViewController.m */,
-				D9358EFA1CB354C100B59E4C /* BookMarkViewController.xib */,
-			);
-			path = BookMarkViewController;
 			sourceTree = "<group>";
 		};
 		D9358EFB1CB354C100B59E4C /* CropImageViewController */ = {
@@ -1186,7 +1168,6 @@
 				D9358FD21CB354C100B59E4C /* ActivityIndicatorViewController.xib in Resources */,
 				D9358F9A1CB354C100B59E4C /* favorited@2x.png in Resources */,
 				D95202CB1CB3595300526801 /* Roboto-MediumItalic.ttf in Resources */,
-				D9358FBE1CB354C100B59E4C /* BookMarkViewController.xib in Resources */,
 				D95202D31CB3595300526801 /* RobotoCondensed-Bold.ttf in Resources */,
 				D95202C31CB3595300526801 /* Roboto-Italic.ttf in Resources */,
 				D952030F1CB37A0B00526801 /* BookMarkViewController.xib in Resources */,
@@ -1330,7 +1311,6 @@
 				D95202D21CB3595300526801 /* Roboto-ThinItalic.ttf in Resources */,
 				D95202C41CB3595300526801 /* Roboto-Italic.ttf in Resources */,
 				D95203101CB37A0B00526801 /* BookMarkViewController.xib in Resources */,
-				D9358FBF1CB354C100B59E4C /* BookMarkViewController.xib in Resources */,
 				D9358FB71CB354C100B59E4C /* AddImageTextViewController.xib in Resources */,
 				D95202F61CB363EC00526801 /* icon_defaul.png in Resources */,
 			);
@@ -1465,7 +1445,6 @@
 				D93590001CB354C100B59E4C /* NSData+ImageContentType.m in Sources */,
 				D9358FD41CB354C100B59E4C /* DiaLogTableViewCell.m in Sources */,
 				D9358FE21CB354C100B59E4C /* Helper.m in Sources */,
-				D9358FBC1CB354C100B59E4C /* BookMarkViewController.m in Sources */,
 				D93590061CB354C100B59E4C /* SDWebImageDecoder.m in Sources */,
 				D9358FC81CB354C100B59E4C /* InfoViewController.m in Sources */,
 				D9358FE41CB354C100B59E4C /* Lib.m in Sources */,
@@ -1529,7 +1508,6 @@
 				D93590011CB354C100B59E4C /* NSData+ImageContentType.m in Sources */,
 				D9358FD51CB354C100B59E4C /* DiaLogTableViewCell.m in Sources */,
 				D9358FE31CB354C100B59E4C /* Helper.m in Sources */,
-				D9358FBD1CB354C100B59E4C /* BookMarkViewController.m in Sources */,
 				D93590071CB354C100B59E4C /* SDWebImageDecoder.m in Sources */,
 				D9358FC91CB354C100B59E4C /* InfoViewController.m in Sources */,
 				D9358FE51CB354C100B59E4C /* Lib.m in Sources */,
