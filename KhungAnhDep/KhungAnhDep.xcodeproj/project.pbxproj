@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		24DEEF196FD29B17E29759D2 /* libPods-KhungAnhDep.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B35C5F820871D7108D440F2F /* libPods-KhungAnhDep.a */; };
 		39FAA58610317A3478CA98D6 /* libPods-KhungAnhDepTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EA2D270FDBD44B84263A9E8 /* libPods-KhungAnhDepTests.a */; };
+		B036D1A61CB4012D002107F0 /* ToolViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B036D1A41CB4012D002107F0 /* ToolViewController.m */; };
+		B036D1A71CB4012D002107F0 /* ToolViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B036D1A41CB4012D002107F0 /* ToolViewController.m */; };
+		B036D1A81CB4012D002107F0 /* ToolViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B036D1A51CB4012D002107F0 /* ToolViewController.xib */; };
+		B036D1A91CB4012D002107F0 /* ToolViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B036D1A51CB4012D002107F0 /* ToolViewController.xib */; };
 		D9358EA31CB3505500B59E4C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D9358EA21CB3505500B59E4C /* main.m */; };
 		D9358EAC1CB3505500B59E4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9358EAA1CB3505500B59E4C /* Main.storyboard */; };
 		D9358EAE1CB3505500B59E4C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9358EAD1CB3505500B59E4C /* Images.xcassets */; };
@@ -281,6 +285,9 @@
 		58AA28A5787CC65CD30CBF60 /* Pods-KhungAnhDepTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KhungAnhDepTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KhungAnhDepTests/Pods-KhungAnhDepTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8EA2D270FDBD44B84263A9E8 /* libPods-KhungAnhDepTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KhungAnhDepTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9327003971C5EB6947A28BBD /* Pods-KhungAnhDep.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KhungAnhDep.release.xcconfig"; path = "Pods/Target Support Files/Pods-KhungAnhDep/Pods-KhungAnhDep.release.xcconfig"; sourceTree = "<group>"; };
+		B036D1A31CB4012D002107F0 /* ToolViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToolViewController.h; sourceTree = "<group>"; };
+		B036D1A41CB4012D002107F0 /* ToolViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToolViewController.m; sourceTree = "<group>"; };
+		B036D1A51CB4012D002107F0 /* ToolViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ToolViewController.xib; sourceTree = "<group>"; };
 		B35C5F820871D7108D440F2F /* libPods-KhungAnhDep.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KhungAnhDep.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B96FDA5943519B00B30C9BCD /* Pods-KhungAnhDep.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KhungAnhDep.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KhungAnhDep/Pods-KhungAnhDep.debug.xcconfig"; sourceTree = "<group>"; };
 		D9358E9D1CB3505500B59E4C /* KhungAnhDep.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KhungAnhDep.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -508,6 +515,16 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		B036D1A21CB40114002107F0 /* ToolViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B036D1A31CB4012D002107F0 /* ToolViewController.h */,
+				B036D1A41CB4012D002107F0 /* ToolViewController.m */,
+				B036D1A51CB4012D002107F0 /* ToolViewController.xib */,
+			);
+			path = ToolViewController;
+			sourceTree = "<group>";
+		};
 		D9358E941CB3505500B59E4C = {
 			isa = PBXGroup;
 			children = (
@@ -733,6 +750,7 @@
 		D9358F031CB354C100B59E4C /* HomeViewController */ = {
 			isa = PBXGroup;
 			children = (
+				B036D1A21CB40114002107F0 /* ToolViewController */,
 				D95203071CB37A0B00526801 /* BookMarkViewController */,
 				D952030B1CB37A0B00526801 /* NewViewController */,
 				D952030C1CB37A0B00526801 /* WallpaperViewController */,
@@ -1233,6 +1251,7 @@
 				D9358FC21CB354C100B59E4C /* CropImageViewController.xib in Resources */,
 				D9358FD61CB354C100B59E4C /* DiaLogTableViewCell.xib in Resources */,
 				D9358F9C1CB354C100B59E4C /* image.png in Resources */,
+				B036D1A81CB4012D002107F0 /* ToolViewController.xib in Resources */,
 				D95202DD1CB3595300526801 /* RobotoCondensed-Regular.ttf in Resources */,
 				D95202D71CB3595300526801 /* RobotoCondensed-Italic.ttf in Resources */,
 				D95202E41CB359DA00526801 /* HomeViewController.xib in Resources */,
@@ -1278,6 +1297,7 @@
 				D9358FA11CB354C100B59E4C /* khunganhmua.png in Resources */,
 				D9358F8F1CB354C100B59E4C /* Default-568h@2x.png in Resources */,
 				D9358F7B1CB354C100B59E4C /* ava.png in Resources */,
+				B036D1A91CB4012D002107F0 /* ToolViewController.xib in Resources */,
 				D9358FB11CB354C100B59E4C /* star@3x.png in Resources */,
 				D9358F9D1CB354C100B59E4C /* image.png in Resources */,
 				D9358F8D1CB354C100B59E4C /* close@3x.png in Resources */,
@@ -1453,6 +1473,7 @@
 				D9358FB41CB354C100B59E4C /* AddImageTextViewController.m in Sources */,
 				D9358FB21CB354C100B59E4C /* AppDelegate.m in Sources */,
 				D9358FB81CB354C100B59E4C /* AddTextTableViewCell.m in Sources */,
+				B036D1A61CB4012D002107F0 /* ToolViewController.m in Sources */,
 				D9358FFC1CB354C100B59E4C /* JBWatchActivityIndicator.m in Sources */,
 				D9358FFE1CB354C100B59E4C /* MKAnnotationView+WebCache.m in Sources */,
 				D952031B1CB37A4600526801 /* WallpaperViewController.m in Sources */,
@@ -1516,6 +1537,7 @@
 				D9358FB51CB354C100B59E4C /* AddImageTextViewController.m in Sources */,
 				D9358FB31CB354C100B59E4C /* AppDelegate.m in Sources */,
 				D9358FB91CB354C100B59E4C /* AddTextTableViewCell.m in Sources */,
+				B036D1A71CB4012D002107F0 /* ToolViewController.m in Sources */,
 				D9358FFD1CB354C100B59E4C /* JBWatchActivityIndicator.m in Sources */,
 				D9358FFF1CB354C100B59E4C /* MKAnnotationView+WebCache.m in Sources */,
 				D952031C1CB37A4600526801 /* WallpaperViewController.m in Sources */,
