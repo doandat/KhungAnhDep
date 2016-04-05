@@ -11,6 +11,7 @@
 
 @interface HomeViewController : BaseViewController<UIPageViewControllerDataSource,UIPageViewControllerDelegate>
 @property (strong, nonatomic) IBOutlet CustomNavigationBar *customNavigationBar;
+@property (weak, nonatomic) IBOutlet UIView *viewContain;
 
 @property (strong, nonatomic) UIPageViewController *pageController;
 

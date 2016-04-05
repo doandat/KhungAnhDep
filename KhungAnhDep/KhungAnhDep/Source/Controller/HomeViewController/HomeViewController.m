@@ -10,6 +10,10 @@
 
 @interface HomeViewController ()
 
+@property (nonatomic) NSInteger indexPendingView;
+@property (nonatomic) int indexDayInArr; //chỉ số để hiển tính view thứ mấy được hiển thị
+
+
 @end
 
 @implementation HomeViewController
@@ -41,6 +45,24 @@ static HomeViewController *sharedInstance;
     [self.customNavigationBar.btnReload addTarget:self action:@selector(btnReload:) forControlEvents:UIControlEventTouchUpInside];
 //    [self.customNavigationBar.btnBookMark setHidden:YES];
 //    [self.customNavigationBar.btnReload setHidden:YES];
+    
+    self.indexDayInArr = 0;
+    self.pageController = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
+    
+    self.pageController.dataSource = self;
+    self.pageController.delegate = self;
+    [[self.pageController view] setFrame:CGRectMake(0, 65, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height-105)];
+    [self.pageController.view setBackgroundColor:[UIColor colorWithRed:180/255.0f green:228/255.0f blue:250/255.0f alpha:1.0f]];
+    
+    DailyViewController *initialViewController = [self viewControllerAtIndex:0];
+    
+    NSArray *viewControllers = [NSArray arrayWithObject:initialViewController];
+    
+    [self.pageController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
+    [self addChildViewController:self.pageController];
+    [self.viewContain addSubview:[self.pageController view]];
+    [self.pageController didMoveToParentViewController:self];
+
 
 }
 
