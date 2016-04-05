@@ -7,6 +7,8 @@
 //
 
 #import "HomeViewController.h"
+#import "NewViewController.h"
+#import "WallpaperViewController.h"
 
 @interface HomeViewController ()
 
@@ -54,7 +56,8 @@ static HomeViewController *sharedInstance;
     [[self.pageController view] setFrame:CGRectMake(0, 65, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height-105)];
     [self.pageController.view setBackgroundColor:[UIColor colorWithRed:180/255.0f green:228/255.0f blue:250/255.0f alpha:1.0f]];
     
-    DailyViewController *initialViewController = [self viewControllerAtIndex:0];
+    NewViewController *initialViewController = [[NewViewController alloc]initWithNibName:@"NewViewController" bundle:nil];
+    
     
     NSArray *viewControllers = [NSArray arrayWithObject:initialViewController];
     

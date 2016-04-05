@@ -256,6 +256,18 @@
 		D95203041CB36E9F00526801 /* ItemCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = D95203011CB36E9F00526801 /* ItemCollectionView.m */; };
 		D95203051CB36E9F00526801 /* ItemCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D95203021CB36E9F00526801 /* ItemCollectionView.xib */; };
 		D95203061CB36E9F00526801 /* ItemCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D95203021CB36E9F00526801 /* ItemCollectionView.xib */; };
+		D952030D1CB37A0B00526801 /* BookMarkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D95203091CB37A0B00526801 /* BookMarkViewController.m */; };
+		D952030E1CB37A0B00526801 /* BookMarkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D95203091CB37A0B00526801 /* BookMarkViewController.m */; };
+		D952030F1CB37A0B00526801 /* BookMarkViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D952030A1CB37A0B00526801 /* BookMarkViewController.xib */; };
+		D95203101CB37A0B00526801 /* BookMarkViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D952030A1CB37A0B00526801 /* BookMarkViewController.xib */; };
+		D95203141CB37A3400526801 /* NewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D95203121CB37A3400526801 /* NewViewController.m */; };
+		D95203151CB37A3400526801 /* NewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D95203121CB37A3400526801 /* NewViewController.m */; };
+		D95203161CB37A3400526801 /* NewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D95203131CB37A3400526801 /* NewViewController.xib */; };
+		D95203171CB37A3400526801 /* NewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D95203131CB37A3400526801 /* NewViewController.xib */; };
+		D952031B1CB37A4600526801 /* WallpaperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D95203191CB37A4600526801 /* WallpaperViewController.m */; };
+		D952031C1CB37A4600526801 /* WallpaperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D95203191CB37A4600526801 /* WallpaperViewController.m */; };
+		D952031D1CB37A4600526801 /* WallpaperViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D952031A1CB37A4600526801 /* WallpaperViewController.xib */; };
+		D952031E1CB37A4600526801 /* WallpaperViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D952031A1CB37A4600526801 /* WallpaperViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -461,6 +473,15 @@
 		D95203001CB36E9F00526801 /* ItemCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemCollectionView.h; sourceTree = "<group>"; };
 		D95203011CB36E9F00526801 /* ItemCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemCollectionView.m; sourceTree = "<group>"; };
 		D95203021CB36E9F00526801 /* ItemCollectionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemCollectionView.xib; sourceTree = "<group>"; };
+		D95203081CB37A0B00526801 /* BookMarkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookMarkViewController.h; sourceTree = "<group>"; };
+		D95203091CB37A0B00526801 /* BookMarkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookMarkViewController.m; sourceTree = "<group>"; };
+		D952030A1CB37A0B00526801 /* BookMarkViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookMarkViewController.xib; sourceTree = "<group>"; };
+		D95203111CB37A3400526801 /* NewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewViewController.h; sourceTree = "<group>"; };
+		D95203121CB37A3400526801 /* NewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewViewController.m; sourceTree = "<group>"; };
+		D95203131CB37A3400526801 /* NewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewViewController.xib; sourceTree = "<group>"; };
+		D95203181CB37A4600526801 /* WallpaperViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WallpaperViewController.h; sourceTree = "<group>"; };
+		D95203191CB37A4600526801 /* WallpaperViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WallpaperViewController.m; sourceTree = "<group>"; };
+		D952031A1CB37A4600526801 /* WallpaperViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WallpaperViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -730,6 +751,9 @@
 		D9358F031CB354C100B59E4C /* HomeViewController */ = {
 			isa = PBXGroup;
 			children = (
+				D95203071CB37A0B00526801 /* BookMarkViewController */,
+				D952030B1CB37A0B00526801 /* NewViewController */,
+				D952030C1CB37A0B00526801 /* WallpaperViewController */,
 			);
 			path = HomeViewController;
 			sourceTree = "<group>";
@@ -1032,6 +1056,36 @@
 			path = ItemCollectionView;
 			sourceTree = "<group>";
 		};
+		D95203071CB37A0B00526801 /* BookMarkViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D95203081CB37A0B00526801 /* BookMarkViewController.h */,
+				D95203091CB37A0B00526801 /* BookMarkViewController.m */,
+				D952030A1CB37A0B00526801 /* BookMarkViewController.xib */,
+			);
+			path = BookMarkViewController;
+			sourceTree = "<group>";
+		};
+		D952030B1CB37A0B00526801 /* NewViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D95203111CB37A3400526801 /* NewViewController.h */,
+				D95203121CB37A3400526801 /* NewViewController.m */,
+				D95203131CB37A3400526801 /* NewViewController.xib */,
+			);
+			path = NewViewController;
+			sourceTree = "<group>";
+		};
+		D952030C1CB37A0B00526801 /* WallpaperViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D95203181CB37A4600526801 /* WallpaperViewController.h */,
+				D95203191CB37A4600526801 /* WallpaperViewController.m */,
+				D952031A1CB37A4600526801 /* WallpaperViewController.xib */,
+			);
+			path = WallpaperViewController;
+			sourceTree = "<group>";
+		};
 		E9065A7AC4DFF278904F45DF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1135,6 +1189,7 @@
 				D9358FBE1CB354C100B59E4C /* BookMarkViewController.xib in Resources */,
 				D95202D31CB3595300526801 /* RobotoCondensed-Bold.ttf in Resources */,
 				D95202C31CB3595300526801 /* Roboto-Italic.ttf in Resources */,
+				D952030F1CB37A0B00526801 /* BookMarkViewController.xib in Resources */,
 				D9358FA61CB354C100B59E4C /* placeholder.png in Resources */,
 				D9358FB61CB354C100B59E4C /* AddImageTextViewController.xib in Resources */,
 				D9358FA21CB354C100B59E4C /* library.png in Resources */,
@@ -1143,6 +1198,7 @@
 				D95202C51CB3595300526801 /* Roboto-Light.ttf in Resources */,
 				D95202F21CB361F400526801 /* MenuTableViewCell.xib in Resources */,
 				D95202D51CB3595300526801 /* RobotoCondensed-BoldItalic.ttf in Resources */,
+				D952031D1CB37A4600526801 /* WallpaperViewController.xib in Resources */,
 				D95202EB1CB359F600526801 /* SideBarViewController.xib in Resources */,
 				D9358F901CB354C100B59E4C /* Default.png in Resources */,
 				D9358F8A1CB354C100B59E4C /* close@2x.png in Resources */,
@@ -1160,6 +1216,7 @@
 				D9358FB01CB354C100B59E4C /* star@3x.png in Resources */,
 				D9358F881CB354C100B59E4C /* close.png in Resources */,
 				D95202D11CB3595300526801 /* Roboto-ThinItalic.ttf in Resources */,
+				D95203161CB37A3400526801 /* NewViewController.xib in Resources */,
 				D95202DB1CB3595300526801 /* RobotoCondensed-LightItalic.ttf in Resources */,
 				D9358FCA1CB354C100B59E4C /* InfoViewController.xib in Resources */,
 				D9358F961CB354C100B59E4C /* favorite@2x.png in Resources */,
@@ -1211,11 +1268,13 @@
 				D9358FD31CB354C100B59E4C /* ActivityIndicatorViewController.xib in Resources */,
 				D9358F9F1CB354C100B59E4C /* imgCell1.png in Resources */,
 				D9358F9B1CB354C100B59E4C /* favorited@2x.png in Resources */,
+				D952031E1CB37A4600526801 /* WallpaperViewController.xib in Resources */,
 				D95202C01CB3595300526801 /* Roboto-Bold.ttf in Resources */,
 				D95202CE1CB3595300526801 /* Roboto-Regular.ttf in Resources */,
 				D95202F31CB361F400526801 /* MenuTableViewCell.xib in Resources */,
 				D9358FA71CB354C100B59E4C /* placeholder.png in Resources */,
 				D95202FE1CB3656C00526801 /* CategoryViewController.xib in Resources */,
+				D95203171CB37A3400526801 /* NewViewController.xib in Resources */,
 				D9358FCB1CB354C100B59E4C /* InfoViewController.xib in Resources */,
 				D9358F7F1CB354C100B59E4C /* btn_back@2x.png in Resources */,
 				D9358FAB1CB354C100B59E4C /* reload@2x.png in Resources */,
@@ -1270,6 +1329,7 @@
 				D9358F7D1CB354C100B59E4C /* btn_back.png in Resources */,
 				D95202D21CB3595300526801 /* Roboto-ThinItalic.ttf in Resources */,
 				D95202C41CB3595300526801 /* Roboto-Italic.ttf in Resources */,
+				D95203101CB37A0B00526801 /* BookMarkViewController.xib in Resources */,
 				D9358FBF1CB354C100B59E4C /* BookMarkViewController.xib in Resources */,
 				D9358FB71CB354C100B59E4C /* AddImageTextViewController.xib in Resources */,
 				D95202F61CB363EC00526801 /* icon_defaul.png in Resources */,
@@ -1383,6 +1443,7 @@
 				D95202FB1CB3656C00526801 /* CategoryViewController.m in Sources */,
 				D95203031CB36E9F00526801 /* ItemCollectionView.m in Sources */,
 				D9358FF61CB354C100B59E4C /* AppService.m in Sources */,
+				D95203141CB37A3400526801 /* NewViewController.m in Sources */,
 				D935901C1CB354C100B59E4C /* UIView+WebCacheOperation.m in Sources */,
 				D9358FEE1CB354C100B59E4C /* EffectBookMark.m in Sources */,
 				D93590201CB354C100B59E4C /* UIView+Toast.m in Sources */,
@@ -1415,12 +1476,14 @@
 				D9358FB81CB354C100B59E4C /* AddTextTableViewCell.m in Sources */,
 				D9358FFC1CB354C100B59E4C /* JBWatchActivityIndicator.m in Sources */,
 				D9358FFE1CB354C100B59E4C /* MKAnnotationView+WebCache.m in Sources */,
+				D952031B1CB37A4600526801 /* WallpaperViewController.m in Sources */,
 				D935901E1CB354C100B59E4C /* SWRevealViewController.m in Sources */,
 				D9358EA31CB3505500B59E4C /* main.m in Sources */,
 				D9358FE01CB354C100B59E4C /* Global.m in Sources */,
 				D9358FF21CB354C100B59E4C /* InputPicBookMark.m in Sources */,
 				D93590141CB354C100B59E4C /* UIImage+MultiFormat.m in Sources */,
 				D93590161CB354C100B59E4C /* UIImage+WebP.m in Sources */,
+				D952030D1CB37A0B00526801 /* BookMarkViewController.m in Sources */,
 				D95202E91CB359F600526801 /* SideBarViewController.m in Sources */,
 				D93590101CB354C100B59E4C /* UIButton+WebCache.m in Sources */,
 				D9358FC41CB354C100B59E4C /* CustomNavigationBar.m in Sources */,
@@ -1444,6 +1507,7 @@
 				D95202FC1CB3656C00526801 /* CategoryViewController.m in Sources */,
 				D95203041CB36E9F00526801 /* ItemCollectionView.m in Sources */,
 				D9358FF71CB354C100B59E4C /* AppService.m in Sources */,
+				D95203151CB37A3400526801 /* NewViewController.m in Sources */,
 				D935901D1CB354C100B59E4C /* UIView+WebCacheOperation.m in Sources */,
 				D9358FEF1CB354C100B59E4C /* EffectBookMark.m in Sources */,
 				D93590211CB354C100B59E4C /* UIView+Toast.m in Sources */,
@@ -1476,12 +1540,14 @@
 				D9358FB91CB354C100B59E4C /* AddTextTableViewCell.m in Sources */,
 				D9358FFD1CB354C100B59E4C /* JBWatchActivityIndicator.m in Sources */,
 				D9358FFF1CB354C100B59E4C /* MKAnnotationView+WebCache.m in Sources */,
+				D952031C1CB37A4600526801 /* WallpaperViewController.m in Sources */,
 				D935901F1CB354C100B59E4C /* SWRevealViewController.m in Sources */,
 				D9358EBD1CB3505500B59E4C /* KhungAnhDepTests.m in Sources */,
 				D9358FE11CB354C100B59E4C /* Global.m in Sources */,
 				D9358FF31CB354C100B59E4C /* InputPicBookMark.m in Sources */,
 				D93590151CB354C100B59E4C /* UIImage+MultiFormat.m in Sources */,
 				D93590171CB354C100B59E4C /* UIImage+WebP.m in Sources */,
+				D952030E1CB37A0B00526801 /* BookMarkViewController.m in Sources */,
 				D95202EA1CB359F600526801 /* SideBarViewController.m in Sources */,
 				D93590111CB354C100B59E4C /* UIButton+WebCache.m in Sources */,
 				D9358FC51CB354C100B59E4C /* CustomNavigationBar.m in Sources */,
