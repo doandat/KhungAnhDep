@@ -9,6 +9,7 @@
 #import "DialogViewController.h"
 #import "DiaLogTableViewCell.h"
 #import "MacroUtilities.h"
+#import "config.h"
 
 @interface DialogViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -70,7 +71,7 @@
     return 44.0f;
 }
 - (BOOL)tableView:(UITableView *)tableView shouldHighlightRowAtIndexPath:(NSIndexPath *)indexPath {
-    [[[self.tableView cellForRowAtIndexPath:indexPath] contentView] setBackgroundColor:MU_RGB(108, 46, 183)];
+    [[[self.tableView cellForRowAtIndexPath:indexPath] contentView] setBackgroundColor:VIEW_COLOR];
     DiaLogTableViewCell *cell = (DiaLogTableViewCell *)[self.tableView cellForRowAtIndexPath:indexPath];
     [cell.lbTitle setTextColor:[UIColor whiteColor]];
     return YES;

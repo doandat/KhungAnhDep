@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SubCategoryWallPaperViewController">
+            <connections>
+                <outlet property="collectionView" destination="sg7-oT-bPN" id="02G-Vo-hc3"/>
+                <outlet property="customNavigationBar" destination="cq7-BD-sPb" id="rob-DU-IZ5"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cq7-BD-sPb" customClass="CustomNavigationBar">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="45"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="oaV-W5-Sfm"/>
+                    </constraints>
+                </view>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="sg7-oT-bPN">
+                    <rect key="frame" x="0.0" y="45" width="320" height="523"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="GQR-ZK-lgQ">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="sg7-oT-bPN" secondAttribute="bottom" id="6Uu-Uy-eAI"/>
+                <constraint firstAttribute="trailing" secondItem="cq7-BD-sPb" secondAttribute="trailing" id="6yB-Fc-Yne"/>
+                <constraint firstItem="sg7-oT-bPN" firstAttribute="top" secondItem="cq7-BD-sPb" secondAttribute="bottom" id="8AV-75-YrM"/>
+                <constraint firstItem="sg7-oT-bPN" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="8sI-9T-3tP"/>
+                <constraint firstItem="cq7-BD-sPb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="IJl-yH-eex"/>
+                <constraint firstItem="cq7-BD-sPb" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="hu0-iv-dZG"/>
+                <constraint firstAttribute="trailing" secondItem="sg7-oT-bPN" secondAttribute="trailing" id="vzc-4L-bzO"/>
+            </constraints>
+            <point key="canvasLocation" x="252" y="199"/>
+        </view>
+    </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

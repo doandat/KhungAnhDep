@@ -23,7 +23,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     RootViewController *rootVC = [[RootViewController alloc]initWithNibName:@"RootViewController" bundle:nil];
     self.window.rootViewController = rootVC;
-    self.window.backgroundColor = [UIColor whiteColor];
+    self.window.backgroundColor = NAVIGATIONBAR_COLOR;
     [self.window makeKeyAndVisible];
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSLog(@"aaaa:%@",[paths objectAtIndex:0]);

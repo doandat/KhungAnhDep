@@ -54,15 +54,21 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self.customNavigationBar.btnMenu addTarget:self action:@selector(btnBack:) forControlEvents:UIControlEventTouchUpInside];
+    [self.customNavigationBar.btnMenu setImage:[UIImage imageNamed:@"btn_back.png"] forState:UIControlStateNormal];
+    [self.customNavigationBar.lbTitle setText:self.dEffect.label];
+    [self.customNavigationBar.lbTitle setFont:[UIFont fontWithName:@"Roboto-Medium" size:22]];
+    [self.customNavigationBar.btnReload addTarget:self action:@selector(btnBookmark:) forControlEvents:UIControlEventTouchUpInside];
+    [self.customNavigationBar.btnReload setImage:[UIImage imageNamed:@"favorite.png"] forState:UIControlStateNormal];
+    [self.customNavigationBar.btnReload setImage:[UIImage imageNamed:@"favorited.png"] forState:UIControlStateSelected];
+    
     RLMResults *bookMark = [EffectBookMark objectsWhere:@"dEffect_id = %@",[NSString stringWithFormat:@"%@",_dEffect.dEffect_id]];
     if (bookMark.count) {
         NSLog(@"đã lưu rồi");
         checkBookMark = YES;
-        [_btnBookmark setSelected:YES];
+        [self.customNavigationBar.btnReload setSelected:YES];
     }
-    [_btnBookmark addTarget:self action:@selector(btnBookmark:) forControlEvents:UIControlEventTouchUpInside];
-    [_btnBookmark setImage:[UIImage imageNamed:@"favorite.png"] forState:UIControlStateNormal];
-    [_btnBookmark setImage:[UIImage imageNamed:@"favorited.png"] forState:UIControlStateSelected];
 
     imageView = [[UIImageView alloc]init];
     [imageView sd_setImageWithURL:[NSURL URLWithString:_dEffect.avatar ] placeholderImage:[UIImage imageNamed:@"placeholder.png"]];
@@ -71,7 +77,7 @@
     [self.scrollView addSubview:imageView];
     
     viewContainDes = [[UIView alloc]init];
-    [viewContainDes setBackgroundColor:MU_RGB(108, 64,184)];
+    [viewContainDes setBackgroundColor:VIEW_COLOR];
     viewContainDes.translatesAutoresizingMaskIntoConstraints = NO;
     [self.scrollView addSubview:viewContainDes];
     
@@ -149,7 +155,7 @@
 }
 -(void)viewWillAppear:(BOOL)animated{
     [self.navigationController setNavigationBarHidden:YES];
-    [_btnBack addTarget:self action:@selector(btnBack:) forControlEvents:UIControlEventTouchUpInside];
+//    [_btnBack addTarget:self action:@selector(btnBack:) forControlEvents:UIControlEventTouchUpInside];
 
     [self.scrollView setContentSize:CGSizeMake([UIScreen mainScreen].bounds.size.width, imageView.frame.size.height+100+self.addImageView.frame.size.height+numberInputText*80)];
     NSLog(@"viewWillAppear dEffect:%@",_dEffect);
@@ -497,7 +503,7 @@
 }
 
 - (void)btnBack:(id) sender{
-    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -529,7 +535,7 @@
             [realm commitWriteTransaction];
 
         }
-        [_btnBookmark setSelected:NO];
+        [self.customNavigationBar.btnReload setSelected:NO];
     }else{
         EffectBookMark *effBM = [[EffectBookMark alloc]init];
         effBM.dEffect_id = _dEffect.dEffect_id;
@@ -568,7 +574,7 @@
             [InputPicBookMark createOrUpdateInRealm:defaultRealm withValue:inputPicBM];
             [defaultRealm commitWriteTransaction];
         }
-        [_btnBookmark setSelected:YES];
+        [self.customNavigationBar.btnReload setSelected:YES];
 
 
     }

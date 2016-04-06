@@ -12,6 +12,7 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageBackgroud;
 @property (weak, nonatomic) IBOutlet UILabel *lbTitle;
+@property (weak, nonatomic) IBOutlet UIView *viewLabel;
 
 
 @end

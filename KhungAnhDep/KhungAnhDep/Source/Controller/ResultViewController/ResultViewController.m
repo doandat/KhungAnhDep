@@ -21,7 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.navigationController setNavigationBarHidden:NO];
-    [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithRed:108/255.0f green:46/255.0f blue:184/255.0f alpha:1.0f]];
+    [self.navigationController.navigationBar setBarTintColor:NAVIGATIONBAR_COLOR];
     [self.navigationController.navigationBar setTintColor:[UIColor whiteColor]];
     self.navigationController.navigationBar.titleTextAttributes = [NSDictionary dictionaryWithObject:[UIColor whiteColor] forKey:NSForegroundColorAttributeName];
     UIBarButtonItem *btnBack = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"btn_back.png"] style:UIBarButtonItemStylePlain target:self action:@selector(btnBack:)];
@@ -54,7 +54,7 @@
     [btnShare setFrame:CGRectMake(widthBounds/2-110, originYButonCrop,100 , 40)];
     [btnShare addTarget:self action:@selector(btnShare:) forControlEvents:UIControlEventTouchUpInside];
     [btnShare setTitle:@"Share" forState:UIControlStateNormal];
-    [btnShare setBackgroundColor:MU_RGB(108, 64, 184)];
+    [btnShare setBackgroundColor:NAVIGATIONBAR_COLOR];
     [btnShare setBackgroundImage:[Helper imageWithColor:[UIColor blackColor]] forState:UIControlStateHighlighted];
     [btnShare setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     //    [crop1 setTitleColor:[UIColor blackColor] forState:UIControlStateHighlighted];
@@ -67,7 +67,7 @@
     [btnSave setTitle:@"Save" forState:UIControlStateNormal];
     [btnSave setFrame:CGRectMake(widthBounds/2+10, originYButonCrop, 100 , 40)];
     [btnSave addTarget:self action:@selector(btnSave:) forControlEvents:UIControlEventTouchUpInside];
-    [btnSave setBackgroundColor:MU_RGB(108, 64, 184)];
+    [btnSave setBackgroundColor:NAVIGATIONBAR_COLOR];
     [btnSave setBackgroundImage:[Helper imageWithColor:[UIColor blackColor]] forState:UIControlStateHighlighted];
     [btnSave setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     //    [cancel setTitleColor:[UIColor blackColor] forState:UIControlStateHighlighted];
@@ -119,7 +119,7 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 -(void)btnDone:(id)sender{
-    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

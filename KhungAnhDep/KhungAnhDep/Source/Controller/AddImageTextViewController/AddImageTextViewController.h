@@ -8,6 +8,7 @@
 
 #import "BaseViewController.h"
 #import "DEffect.h"
+#import "CustomNavigationBar.h"
 
 @interface AddImageTextViewController : BaseViewController
 
@@ -22,9 +23,6 @@
 @property (strong, nonatomic) IBOutlet UIView *addTextView;
 @property (weak, nonatomic) IBOutlet UITableView *tableViewAddText;
 
-
-@property (weak, nonatomic) IBOutlet UIButton *btnBack;
-
-@property (weak, nonatomic) IBOutlet UIButton *btnBookmark;
+@property (weak, nonatomic) IBOutlet CustomNavigationBar *customNavigationBar;
 
 @end

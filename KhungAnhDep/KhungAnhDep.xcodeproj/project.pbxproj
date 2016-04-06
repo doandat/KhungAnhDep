@@ -268,6 +268,18 @@
 		D952031C1CB37A4600526801 /* WallpaperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D95203191CB37A4600526801 /* WallpaperViewController.m */; };
 		D952031D1CB37A4600526801 /* WallpaperViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D952031A1CB37A4600526801 /* WallpaperViewController.xib */; };
 		D952031E1CB37A4600526801 /* WallpaperViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D952031A1CB37A4600526801 /* WallpaperViewController.xib */; };
+		D98AC15E1CB4BF7A0063592C /* DCategoryTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = D98AC15D1CB4BF7A0063592C /* DCategoryTheme.m */; };
+		D98AC15F1CB4BF7A0063592C /* DCategoryTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = D98AC15D1CB4BF7A0063592C /* DCategoryTheme.m */; };
+		D98AC1621CB4BF8C0063592C /* DTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = D98AC1611CB4BF8C0063592C /* DTheme.m */; };
+		D98AC1631CB4BF8C0063592C /* DTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = D98AC1611CB4BF8C0063592C /* DTheme.m */; };
+		D98AC1681CB4C55C0063592C /* SubCategoryWallPaperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D98AC1661CB4C55C0063592C /* SubCategoryWallPaperViewController.m */; };
+		D98AC1691CB4C55C0063592C /* SubCategoryWallPaperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D98AC1661CB4C55C0063592C /* SubCategoryWallPaperViewController.m */; };
+		D98AC16A1CB4C55C0063592C /* SubCategoryWallPaperViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D98AC1671CB4C55C0063592C /* SubCategoryWallPaperViewController.xib */; };
+		D98AC16B1CB4C55C0063592C /* SubCategoryWallPaperViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D98AC1671CB4C55C0063592C /* SubCategoryWallPaperViewController.xib */; };
+		D98AC1701CB4CA000063592C /* ShowBackgroundController.m in Sources */ = {isa = PBXBuildFile; fileRef = D98AC16E1CB4CA000063592C /* ShowBackgroundController.m */; };
+		D98AC1711CB4CA000063592C /* ShowBackgroundController.m in Sources */ = {isa = PBXBuildFile; fileRef = D98AC16E1CB4CA000063592C /* ShowBackgroundController.m */; };
+		D98AC1721CB4CA000063592C /* ShowBackgroundController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D98AC16F1CB4CA000063592C /* ShowBackgroundController.xib */; };
+		D98AC1731CB4CA000063592C /* ShowBackgroundController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D98AC16F1CB4CA000063592C /* ShowBackgroundController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -435,9 +447,9 @@
 		D93590261CB354DE00B59E4C /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		D93590271CB354DE00B59E4C /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		D93590281CB354DE00B59E4C /* BaseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BaseViewController.xib; sourceTree = "<group>"; };
-		D935902D1CB354F800B59E4C /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RootViewController.h; path = RootViewController/RootViewController.h; sourceTree = "<group>"; };
-		D935902E1CB354F800B59E4C /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RootViewController.m; path = RootViewController/RootViewController.m; sourceTree = "<group>"; };
-		D935902F1CB354F800B59E4C /* RootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RootViewController.xib; path = RootViewController/RootViewController.xib; sourceTree = "<group>"; };
+		D935902D1CB354F800B59E4C /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		D935902E1CB354F800B59E4C /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		D935902F1CB354F800B59E4C /* RootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
 		D95202A71CB3578B00526801 /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
 		D95202A91CB3595300526801 /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
 		D95202AA1CB3595300526801 /* Roboto-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BlackItalic.ttf"; sourceTree = "<group>"; };
@@ -457,9 +469,9 @@
 		D95202B81CB3595300526801 /* RobotoCondensed-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Light.ttf"; sourceTree = "<group>"; };
 		D95202B91CB3595300526801 /* RobotoCondensed-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-LightItalic.ttf"; sourceTree = "<group>"; };
 		D95202BA1CB3595300526801 /* RobotoCondensed-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Regular.ttf"; sourceTree = "<group>"; };
-		D95202DF1CB359DA00526801 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeViewController.h; path = HomeViewController/HomeViewController.h; sourceTree = "<group>"; };
-		D95202E01CB359DA00526801 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeViewController.m; path = HomeViewController/HomeViewController.m; sourceTree = "<group>"; };
-		D95202E11CB359DA00526801 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HomeViewController.xib; path = HomeViewController/HomeViewController.xib; sourceTree = "<group>"; };
+		D95202DF1CB359DA00526801 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		D95202E01CB359DA00526801 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		D95202E11CB359DA00526801 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		D95202E61CB359F600526801 /* SideBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SideBarViewController.h; sourceTree = "<group>"; };
 		D95202E71CB359F600526801 /* SideBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SideBarViewController.m; sourceTree = "<group>"; };
 		D95202E81CB359F600526801 /* SideBarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SideBarViewController.xib; sourceTree = "<group>"; };
@@ -482,6 +494,16 @@
 		D95203181CB37A4600526801 /* WallpaperViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WallpaperViewController.h; sourceTree = "<group>"; };
 		D95203191CB37A4600526801 /* WallpaperViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WallpaperViewController.m; sourceTree = "<group>"; };
 		D952031A1CB37A4600526801 /* WallpaperViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WallpaperViewController.xib; sourceTree = "<group>"; };
+		D98AC15C1CB4BF7A0063592C /* DCategoryTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCategoryTheme.h; sourceTree = "<group>"; };
+		D98AC15D1CB4BF7A0063592C /* DCategoryTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCategoryTheme.m; sourceTree = "<group>"; };
+		D98AC1601CB4BF8C0063592C /* DTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTheme.h; sourceTree = "<group>"; };
+		D98AC1611CB4BF8C0063592C /* DTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTheme.m; sourceTree = "<group>"; };
+		D98AC1651CB4C55C0063592C /* SubCategoryWallPaperViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubCategoryWallPaperViewController.h; sourceTree = "<group>"; };
+		D98AC1661CB4C55C0063592C /* SubCategoryWallPaperViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubCategoryWallPaperViewController.m; sourceTree = "<group>"; };
+		D98AC1671CB4C55C0063592C /* SubCategoryWallPaperViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubCategoryWallPaperViewController.xib; sourceTree = "<group>"; };
+		D98AC16D1CB4CA000063592C /* ShowBackgroundController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowBackgroundController.h; sourceTree = "<group>"; };
+		D98AC16E1CB4CA000063592C /* ShowBackgroundController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowBackgroundController.m; sourceTree = "<group>"; };
+		D98AC16F1CB4CA000063592C /* ShowBackgroundController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShowBackgroundController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -677,13 +699,7 @@
 			children = (
 				D9358EF61CB354C100B59E4C /* BaseViewController */,
 				D9358F0C1CB354C100B59E4C /* RootViewController */,
-				D935902D1CB354F800B59E4C /* RootViewController.h */,
-				D935902E1CB354F800B59E4C /* RootViewController.m */,
-				D935902F1CB354F800B59E4C /* RootViewController.xib */,
 				D9358F031CB354C100B59E4C /* HomeViewController */,
-				D95202DF1CB359DA00526801 /* HomeViewController.h */,
-				D95202E01CB359DA00526801 /* HomeViewController.m */,
-				D95202E11CB359DA00526801 /* HomeViewController.xib */,
 				D9358F0D1CB354C100B59E4C /* SideBarController */,
 				D95202F71CB3655200526801 /* CategoryViewController */,
 				D9358EEE1CB354C100B59E4C /* AddImageTextViewController */,
@@ -750,6 +766,9 @@
 		D9358F031CB354C100B59E4C /* HomeViewController */ = {
 			isa = PBXGroup;
 			children = (
+				D95202DF1CB359DA00526801 /* HomeViewController.h */,
+				D95202E01CB359DA00526801 /* HomeViewController.m */,
+				D95202E11CB359DA00526801 /* HomeViewController.xib */,
 				B036D1A21CB40114002107F0 /* ToolViewController */,
 				D95203071CB37A0B00526801 /* BookMarkViewController */,
 				D952030B1CB37A0B00526801 /* NewViewController */,
@@ -781,6 +800,9 @@
 		D9358F0C1CB354C100B59E4C /* RootViewController */ = {
 			isa = PBXGroup;
 			children = (
+				D935902D1CB354F800B59E4C /* RootViewController.h */,
+				D935902E1CB354F800B59E4C /* RootViewController.m */,
+				D935902F1CB354F800B59E4C /* RootViewController.xib */,
 			);
 			path = RootViewController;
 			sourceTree = "<group>";
@@ -880,6 +902,10 @@
 				D9358F341CB354C100B59E4C /* InputLineBookMark.m */,
 				D9358F351CB354C100B59E4C /* InputPicBookMark.h */,
 				D9358F361CB354C100B59E4C /* InputPicBookMark.m */,
+				D98AC15C1CB4BF7A0063592C /* DCategoryTheme.h */,
+				D98AC15D1CB4BF7A0063592C /* DCategoryTheme.m */,
+				D98AC1601CB4BF8C0063592C /* DTheme.h */,
+				D98AC1611CB4BF8C0063592C /* DTheme.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1079,11 +1105,33 @@
 		D952030C1CB37A0B00526801 /* WallpaperViewController */ = {
 			isa = PBXGroup;
 			children = (
+				D98AC16C1CB4C9F40063592C /* ShowBackgroundController */,
+				D98AC1641CB4C54D0063592C /* SubCategoryWallPaperViewController */,
 				D95203181CB37A4600526801 /* WallpaperViewController.h */,
 				D95203191CB37A4600526801 /* WallpaperViewController.m */,
 				D952031A1CB37A4600526801 /* WallpaperViewController.xib */,
 			);
 			path = WallpaperViewController;
+			sourceTree = "<group>";
+		};
+		D98AC1641CB4C54D0063592C /* SubCategoryWallPaperViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D98AC1651CB4C55C0063592C /* SubCategoryWallPaperViewController.h */,
+				D98AC1661CB4C55C0063592C /* SubCategoryWallPaperViewController.m */,
+				D98AC1671CB4C55C0063592C /* SubCategoryWallPaperViewController.xib */,
+			);
+			path = SubCategoryWallPaperViewController;
+			sourceTree = "<group>";
+		};
+		D98AC16C1CB4C9F40063592C /* ShowBackgroundController */ = {
+			isa = PBXGroup;
+			children = (
+				D98AC16D1CB4CA000063592C /* ShowBackgroundController.h */,
+				D98AC16E1CB4CA000063592C /* ShowBackgroundController.m */,
+				D98AC16F1CB4CA000063592C /* ShowBackgroundController.xib */,
+			);
+			path = ShowBackgroundController;
 			sourceTree = "<group>";
 		};
 		E9065A7AC4DFF278904F45DF /* Frameworks */ = {
@@ -1181,11 +1229,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D98AC16A1CB4C55C0063592C /* SubCategoryWallPaperViewController.xib in Resources */,
 				D95202C11CB3595300526801 /* Roboto-BoldItalic.ttf in Resources */,
 				D9358FAE1CB354C100B59E4C /* star@2x.png in Resources */,
 				D9358FD21CB354C100B59E4C /* ActivityIndicatorViewController.xib in Resources */,
 				D9358F9A1CB354C100B59E4C /* favorited@2x.png in Resources */,
 				D95202CB1CB3595300526801 /* Roboto-MediumItalic.ttf in Resources */,
+				D98AC1721CB4CA000063592C /* ShowBackgroundController.xib in Resources */,
 				D95202D31CB3595300526801 /* RobotoCondensed-Bold.ttf in Resources */,
 				D95202C31CB3595300526801 /* Roboto-Italic.ttf in Resources */,
 				D952030F1CB37A0B00526801 /* BookMarkViewController.xib in Resources */,
@@ -1268,6 +1318,7 @@
 				D9358FD31CB354C100B59E4C /* ActivityIndicatorViewController.xib in Resources */,
 				D9358F9F1CB354C100B59E4C /* imgCell1.png in Resources */,
 				D9358F9B1CB354C100B59E4C /* favorited@2x.png in Resources */,
+				D98AC16B1CB4C55C0063592C /* SubCategoryWallPaperViewController.xib in Resources */,
 				D952031E1CB37A4600526801 /* WallpaperViewController.xib in Resources */,
 				D95202C01CB3595300526801 /* Roboto-Bold.ttf in Resources */,
 				D95202CE1CB3595300526801 /* Roboto-Regular.ttf in Resources */,
@@ -1282,6 +1333,7 @@
 				D9358FAF1CB354C100B59E4C /* star@2x.png in Resources */,
 				D95202C81CB3595300526801 /* Roboto-LightItalic.ttf in Resources */,
 				D9358F871CB354C100B59E4C /* camera@2x.png in Resources */,
+				D98AC1731CB4CA000063592C /* ShowBackgroundController.xib in Resources */,
 				D95202D61CB3595300526801 /* RobotoCondensed-BoldItalic.ttf in Resources */,
 				D95202C61CB3595300526801 /* Roboto-Light.ttf in Resources */,
 				D9358F991CB354C100B59E4C /* favorited.png in Resources */,
@@ -1463,6 +1515,7 @@
 				D9358FFA1CB354C100B59E4C /* InputHelper.m in Sources */,
 				D93590081CB354C100B59E4C /* SDWebImageDownloader.m in Sources */,
 				D93590001CB354C100B59E4C /* NSData+ImageContentType.m in Sources */,
+				D98AC1621CB4BF8C0063592C /* DTheme.m in Sources */,
 				D9358FD41CB354C100B59E4C /* DiaLogTableViewCell.m in Sources */,
 				D9358FE21CB354C100B59E4C /* Helper.m in Sources */,
 				D93590061CB354C100B59E4C /* SDWebImageDecoder.m in Sources */,
@@ -1478,6 +1531,7 @@
 				D9358FFE1CB354C100B59E4C /* MKAnnotationView+WebCache.m in Sources */,
 				D952031B1CB37A4600526801 /* WallpaperViewController.m in Sources */,
 				D935901E1CB354C100B59E4C /* SWRevealViewController.m in Sources */,
+				D98AC15E1CB4BF7A0063592C /* DCategoryTheme.m in Sources */,
 				D9358EA31CB3505500B59E4C /* main.m in Sources */,
 				D9358FE01CB354C100B59E4C /* Global.m in Sources */,
 				D9358FF21CB354C100B59E4C /* InputPicBookMark.m in Sources */,
@@ -1487,11 +1541,13 @@
 				D95202E91CB359F600526801 /* SideBarViewController.m in Sources */,
 				D93590101CB354C100B59E4C /* UIButton+WebCache.m in Sources */,
 				D9358FC41CB354C100B59E4C /* CustomNavigationBar.m in Sources */,
+				D98AC1701CB4CA000063592C /* ShowBackgroundController.m in Sources */,
 				D9358FE61CB354C100B59E4C /* DCategory.m in Sources */,
 				D9358FF01CB354C100B59E4C /* InputLineBookMark.m in Sources */,
 				D9358FCC1CB354C100B59E4C /* ResultViewController.m in Sources */,
 				D9358FEC1CB354C100B59E4C /* DInputPic.m in Sources */,
 				D93590291CB354DE00B59E4C /* BaseViewController.m in Sources */,
+				D98AC1681CB4C55C0063592C /* SubCategoryWallPaperViewController.m in Sources */,
 				D9358FD01CB354C100B59E4C /* ActivityIndicatorViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1527,6 +1583,7 @@
 				D9358FFB1CB354C100B59E4C /* InputHelper.m in Sources */,
 				D93590091CB354C100B59E4C /* SDWebImageDownloader.m in Sources */,
 				D93590011CB354C100B59E4C /* NSData+ImageContentType.m in Sources */,
+				D98AC1631CB4BF8C0063592C /* DTheme.m in Sources */,
 				D9358FD51CB354C100B59E4C /* DiaLogTableViewCell.m in Sources */,
 				D9358FE31CB354C100B59E4C /* Helper.m in Sources */,
 				D93590071CB354C100B59E4C /* SDWebImageDecoder.m in Sources */,
@@ -1542,6 +1599,7 @@
 				D9358FFF1CB354C100B59E4C /* MKAnnotationView+WebCache.m in Sources */,
 				D952031C1CB37A4600526801 /* WallpaperViewController.m in Sources */,
 				D935901F1CB354C100B59E4C /* SWRevealViewController.m in Sources */,
+				D98AC15F1CB4BF7A0063592C /* DCategoryTheme.m in Sources */,
 				D9358EBD1CB3505500B59E4C /* KhungAnhDepTests.m in Sources */,
 				D9358FE11CB354C100B59E4C /* Global.m in Sources */,
 				D9358FF31CB354C100B59E4C /* InputPicBookMark.m in Sources */,
@@ -1551,11 +1609,13 @@
 				D95202EA1CB359F600526801 /* SideBarViewController.m in Sources */,
 				D93590111CB354C100B59E4C /* UIButton+WebCache.m in Sources */,
 				D9358FC51CB354C100B59E4C /* CustomNavigationBar.m in Sources */,
+				D98AC1711CB4CA000063592C /* ShowBackgroundController.m in Sources */,
 				D9358FE71CB354C100B59E4C /* DCategory.m in Sources */,
 				D9358FF11CB354C100B59E4C /* InputLineBookMark.m in Sources */,
 				D9358FCD1CB354C100B59E4C /* ResultViewController.m in Sources */,
 				D9358FED1CB354C100B59E4C /* DInputPic.m in Sources */,
 				D935902A1CB354DE00B59E4C /* BaseViewController.m in Sources */,
+				D98AC1691CB4C55C0063592C /* SubCategoryWallPaperViewController.m in Sources */,
 				D9358FD11CB354C100B59E4C /* ActivityIndicatorViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

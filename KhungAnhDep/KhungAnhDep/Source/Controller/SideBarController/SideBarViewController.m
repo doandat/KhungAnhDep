@@ -27,10 +27,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.navigationController setNavigationBarHidden:YES];
-    [self.view setBackgroundColor:[UIColor colorWithRed:12/255.0f green:40/255.0f blue:52/255.0f alpha:1.0f]];
-    UINavigationBar *navBar = self.navigationController.navigationBar;
-    [navBar setBarTintColor:[UIColor colorWithRed:12/255.0f green:40/255.0f blue:52/255.0f alpha:1.0f]];
-    [navBar setTintColor:[UIColor whiteColor]];
+//    [self.view setBackgroundColor:[UIColor colorWithRed:12/255.0f green:40/255.0f blue:52/255.0f alpha:1.0f]];
+//    UINavigationBar *navBar = self.navigationController.navigationBar;
+//    [navBar setBarTintColor:[UIColor colorWithRed:12/255.0f green:40/255.0f blue:52/255.0f alpha:1.0f]];
+//    [navBar setTintColor:[UIColor whiteColor]];
     
     self.sidebarMenuOpen = NO;
     self.tableView.dataSource = self;
@@ -38,7 +38,7 @@
     [self.tableView registerNib:[UINib nibWithNibName:@"MenuTableViewCell" bundle:nil] forCellReuseIdentifier:@"MenuTableViewCellIdentifier"];
     [self.tableView reloadData];
     [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
-
+    [self.tableView setBackgroundColor:VIEW_COLOR];
     
     self.menuItems= [[NSMutableArray alloc] init];
     [self.menuItems addObject:@"TrangChu"];
@@ -78,17 +78,23 @@
     [cell.imageDes setImage:[UIImage imageNamed:@
                              "icon_defaul.png"]];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    cell.contentView.backgroundColor = [UIColor colorWithRed:3/255.0f green:169/255.0f blue:245/255.0f alpha:1.0f];
+//    cell.contentView.backgroundColor = [UIColor colorWithRed:3/255.0f green:169/255.0f blue:245/255.0f alpha:1.0f];
+    cell.contentView.backgroundColor = VIEW_COLOR;
+
     return cell;
 }
 - (BOOL)tableView:(UITableView *)tableView shouldHighlightRowAtIndexPath:(NSIndexPath *)indexPath {
-    [[[self.tableView cellForRowAtIndexPath:indexPath] contentView] setBackgroundColor:[UIColor colorWithRed:2/255.0f green:136/255.0f blue:209/255.0f alpha:1.0f]];
+//    [[[self.tableView cellForRowAtIndexPath:indexPath] contentView] setBackgroundColor:[UIColor colorWithRed:2/255.0f green:136/255.0f blue:209/255.0f alpha:1.0f]];
+//    [[[self.tableView cellForRowAtIndexPath:indexPath] contentView] setBackgroundColor:NAVIGATIONBAR_COLOR];
+
     return YES;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [[[self.tableView cellForRowAtIndexPath:indexPath] contentView] setBackgroundColor:[UIColor colorWithRed:2/255.0f green:136/255.0f blue:209/255.0f alpha:1.0f]];
+//    [[[self.tableView cellForRowAtIndexPath:indexPath] contentView] setBackgroundColor:[UIColor colorWithRed:2/255.0f green:136/255.0f blue:209/255.0f alpha:1.0f]];
+    [[[self.tableView cellForRowAtIndexPath:indexPath] contentView] setBackgroundColor:NAVIGATIONBAR_COLOR];
+
     if (indexPath.row == 0) {
         HomeViewController *homeVC = [[HomeViewController alloc]init];
         [self.revealViewController pushFrontViewController:homeVC animated:YES];
@@ -110,9 +116,10 @@
     [lbTitle setTextColor:[UIColor whiteColor]];
     
     [viewHeader addSubview:lbTitle];
-    [viewHeader setBackgroundColor:[UIColor colorWithRed:2/255.0f green:136/255.0f blue:209/255.0f alpha:1.0f]];
+//    [viewHeader setBackgroundColor:[UIColor colorWithRed:2/255.0f green:136/255.0f blue:209/255.0f alpha:1.0f]];
+    [viewHeader setBackgroundColor:NAVIGATIONBAR_COLOR];
     UIView *viewSeparator = [[UIView alloc]initWithFrame:CGRectMake(0, 44, self.view.frame.size.width, 1)];
-    [viewSeparator setBackgroundColor:[UIColor colorWithRed:27/255.0f green:156/255.0f blue:222/255.0f alpha:1.0f]];
+    [viewSeparator setBackgroundColor:SEPARATOR_COLOR];
     [viewHeader addSubview:viewSeparator];
     
     return viewHeader;

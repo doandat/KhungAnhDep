@@ -9,6 +9,7 @@
 #import "CategoryViewController.h"
 #import "RootViewController.h"
 #import "ItemCollectionView.h"
+#import "AddImageTextViewController.h"
 
 @interface CategoryViewController ()<UICollectionViewDelegate,UICollectionViewDataSource>
 
@@ -36,7 +37,7 @@
     self.collectionView.delegate = self;
     [self.collectionView registerNib:[UINib nibWithNibName:@"ItemCollectionView" bundle:[NSBundle mainBundle]]
         forCellWithReuseIdentifier:@"ItemCollectionIdentifier"];
-    self.collectionView.backgroundColor = [UIColor colorWithRed:3/255.0f green:169/255.0f blue:245/255.0f alpha:1.0f];
+    self.collectionView.backgroundColor = VIEW_COLOR;
 
     ActivityIndicatorViewController *activityVC = [[ActivityIndicatorViewController alloc]initWithNibName:@"ActivityIndicatorViewController" bundle:nil];
     
@@ -87,7 +88,11 @@
 }
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-   
+    DEffect *dEffect = [self.arrDataSource objectAtIndex:indexPath.row];
+    AddImageTextViewController *addImageTextVC = [[AddImageTextViewController alloc]initWithNibName:@"AddImageTextViewController" bundle:nil];
+    addImageTextVC.dEffect = dEffect;
+    [self.navigationController pushViewController:addImageTextVC animated:YES];
+
     
 }
 

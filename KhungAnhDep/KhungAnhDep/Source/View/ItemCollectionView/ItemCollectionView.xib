@@ -50,6 +50,7 @@
             <connections>
                 <outlet property="imageBackgroud" destination="lxF-ZY-p5I" id="7ra-Zy-de3"/>
                 <outlet property="lbTitle" destination="a85-V0-3cf" id="0p9-og-rcv"/>
+                <outlet property="viewLabel" destination="uJl-je-cVN" id="Gll-dj-9En"/>
             </connections>
         </collectionViewCell>
     </objects>

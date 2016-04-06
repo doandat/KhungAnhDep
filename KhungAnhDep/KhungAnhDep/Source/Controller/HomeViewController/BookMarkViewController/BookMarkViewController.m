@@ -8,10 +8,11 @@
 
 #import "BookMarkViewController.h"
 #import "AddImageTextViewController.h"
+#import "ItemCollectionView.h"
 
 @interface BookMarkViewController ()<UICollectionViewDelegate,UICollectionViewDataSource>{
-    NSMutableArray *arrDataSource;
 }
+@property (nonatomic) NSMutableArray *arrDataSource;
 
 @end
 
@@ -21,16 +22,15 @@
     [super viewDidLoad];
     self.collectionView.dataSource = self;
     self.collectionView.delegate = self;
-    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"cellIdentifier"];
-    [self.collectionView setBackgroundColor:MU_RGBA(108, 64, 184, 0.7)];
-    [_btnBack addTarget:self action:@selector(btnBack:) forControlEvents:UIControlEventTouchUpInside];
-    [self.navigationController setNavigationBarHidden:YES];
+    [self.collectionView registerNib:[UINib nibWithNibName:@"ItemCollectionView" bundle:[NSBundle mainBundle]]
+          forCellWithReuseIdentifier:@"ItemCollectionIdentifier"];
+    [self.collectionView setBackgroundColor:VIEW_COLOR];
 }
 -(void)viewWillAppear:(BOOL)animated{
     [self loadDB];
 }
 -(void)loadDB{
-    arrDataSource = [[NSMutableArray alloc]init];
+    self.arrDataSource = [[NSMutableArray alloc]init];
     RLMResults *bookMarkResult = [EffectBookMark allObjects];
     for (EffectBookMark *effBM in bookMarkResult) {
         DEffect *dEffect = [[DEffect alloc]init];
@@ -61,14 +61,10 @@
             [arrInputPic addObject:inputPic];
         }
         dEffect.input_pic = arrInputPic;
-        [arrDataSource addObject:dEffect];
+        [self.arrDataSource addObject:dEffect];
     }
     
     [self.collectionView reloadData];
-}
-
-- (void)btnBack:(id)sender{
-    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -84,36 +80,33 @@
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return arrDataSource.count;
+    return self.arrDataSource.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell=[collectionView dequeueReusableCellWithReuseIdentifier:@"cellIdentifier" forIndexPath:indexPath];
-    [cell setBackgroundColor:[UIColor colorWithRed:19/255.0f green:19/255.0f blue:19/255.0f alpha:1.0f]];
-    DEffect *dEffect = [arrDataSource objectAtIndex:indexPath.row];
-    CGFloat width = (([UIScreen mainScreen].bounds.size.width-10)/2>202)? ([UIScreen mainScreen].bounds.size.width-30)/4:([UIScreen mainScreen].bounds.size.width-10)/2;
+    static NSString *identifier = @"ItemCollectionIdentifier";
     
-//    SubItemCollectionView *subItemView = [[SubItemCollectionView alloc]initWithFrame:CGRectMake(0, 0, width, width*2/3+40)];
-//    subItemView.autoresizingMask = (UIViewAutoresizingFlexibleTopMargin |
-//                                    UIViewAutoresizingFlexibleBottomMargin |
-//                                    UIViewAutoresizingFlexibleLeftMargin|
-//                                    UIViewAutoresizingFlexibleRightMargin|UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight);
-//    
-//    [subItemView.imgAvatar sd_setImageWithURL:[NSURL URLWithString: dEffect.avatar] placeholderImage:[UIImage imageNamed:@"placeholder.png"]];
-//    subItemView.lbDes.text = dEffect.effectDescription;
-//    [subItemView setBackgroundColor:[UIColor redColor]];
-//    [cell addSubview:subItemView];
+    DEffect *dEffect = [self.arrDataSource objectAtIndex:indexPath.row];
+    ItemCollectionView *cell = (ItemCollectionView *)[collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
+    
+    if(!cell){
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"ItemCollectionView" owner:self options:nil];
+        cell = [nib objectAtIndex:0];
+    }
+    
+    [cell.imageBackgroud sd_setImageWithURL:[NSURL URLWithString: dEffect.avatar] placeholderImage:[UIImage imageNamed:@"placeholder.png"]];
+    //    [cell setBackgroundColor:[UIColor redColor]];
+    [cell.lbTitle setText:dEffect.label];
     
     return cell;
     
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    DEffect *dEffect = [arrDataSource objectAtIndex:indexPath.row];
+    DEffect *dEffect = [self.arrDataSource objectAtIndex:indexPath.row];
     AddImageTextViewController *addImageTextVC = [[AddImageTextViewController alloc]initWithNibName:@"AddImageTextViewController" bundle:nil];
-    UINavigationController *navigationAddImageText = [[UINavigationController alloc]initWithRootViewController:addImageTextVC];;
     addImageTextVC.dEffect = dEffect;
-    [self presentViewController:navigationAddImageText animated:YES completion:nil];
+    [self.navigationController pushViewController:addImageTextVC animated:YES];
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView

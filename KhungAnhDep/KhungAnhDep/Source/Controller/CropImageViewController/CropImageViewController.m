@@ -31,7 +31,7 @@
     [super viewDidLoad];
     
     [self.navigationController setNavigationBarHidden:NO];
-    [self.navigationController.navigationBar setBarTintColor:MU_RGB(108, 46, 184)];
+    [self.navigationController.navigationBar setBarTintColor:NAVIGATIONBAR_COLOR];
     [self.navigationController.navigationBar setTintColor:[UIColor whiteColor]];
     self.navigationController.navigationBar.titleTextAttributes = [NSDictionary dictionaryWithObject:[UIColor whiteColor] forKey:NSForegroundColorAttributeName];
     UIBarButtonItem *btnBack = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"btn_back.png"] style:UIBarButtonItemStylePlain target:self action:@selector(itemBack:)];
@@ -60,7 +60,7 @@
     [crop1 setFrame:CGRectMake(widthBounds/2-110, originYButonCrop,100 , 40)];
     [crop1 addTarget:self action:@selector(crop1:) forControlEvents:UIControlEventTouchUpInside];
     [crop1 setTitle:@"Crop" forState:UIControlStateNormal];
-    [crop1 setBackgroundColor:MU_RGB(108, 46, 184)];
+    [crop1 setBackgroundColor:NAVIGATIONBAR_COLOR];
     [crop1 setBackgroundImage:[Helper imageWithColor:[UIColor blackColor]] forState:UIControlStateHighlighted];
     [crop1 setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     //    [crop1 setTitleColor:[UIColor blackColor] forState:UIControlStateHighlighted];
@@ -73,7 +73,7 @@
     [cancel setTitle:@"Cancel" forState:UIControlStateNormal];
     [cancel setFrame:CGRectMake(widthBounds/2+10, originYButonCrop, 100 , 40)];
     [cancel addTarget:self action:@selector(cancel1:) forControlEvents:UIControlEventTouchUpInside];
-    [cancel setBackgroundColor:MU_RGB(108, 64, 184)];
+    [cancel setBackgroundColor:NAVIGATIONBAR_COLOR];
     [cancel setBackgroundImage:[Helper imageWithColor:[UIColor blackColor]] forState:UIControlStateHighlighted];
     [cancel setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     //    [cancel setTitleColor:[UIColor blackColor] forState:UIControlStateHighlighted];

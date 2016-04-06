@@ -49,7 +49,6 @@ static HomeViewController *sharedInstance;
     [self.customNavigationBar.btnMenu addTarget:revealController action:@selector(revealToggle:) forControlEvents:UIControlEventTouchUpInside];
     [self.customNavigationBar.lbTitle setText:@"Home"];
     [self.customNavigationBar.lbTitle setFont:[UIFont fontWithName:@"Roboto-Medium" size:22]];
-    [self.customNavigationBar.btnBookMark addTarget:self action:@selector(btnBookMark:) forControlEvents:UIControlEventTouchUpInside];
     [self.customNavigationBar.btnReload addTarget:self action:@selector(btnReload:) forControlEvents:UIControlEventTouchUpInside];
 //    [self.customNavigationBar.btnBookMark setHidden:YES];
 //    [self.customNavigationBar.btnReload setHidden:YES];
@@ -60,38 +59,75 @@ static HomeViewController *sharedInstance;
     
     self.pageController.dataSource = self;
     self.pageController.delegate = self;
-    [[self.pageController view] setFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height-85)];
-    [self.pageController.view setBackgroundColor:[UIColor colorWithRed:180/255.0f green:228/255.0f blue:250/255.0f alpha:1.0f]];
+    self.pageController.view.translatesAutoresizingMaskIntoConstraints = NO;
+
+//    [[self.pageController view] setFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height-85)];
+    [self.pageController.view setBackgroundColor:VIEW_COLOR];
     
     NewViewController *initialViewController = [[NewViewController alloc]initWithNibName:@"NewViewController" bundle:nil];
     
     
     NSArray *viewControllers = [NSArray arrayWithObject:initialViewController];
+    [self.btnTabNew setSelected:YES];
     
     [self.pageController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
     [self addChildViewController:self.pageController];
     [self.viewContain addSubview:[self.pageController view]];
     [self.pageController didMoveToParentViewController:self];
+    
+    [self addConstraint];
 
 
 }
+-(void)addConstraint{
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.pageController.view
+                                                          attribute:NSLayoutAttributeTop
+                                                          relatedBy:NSLayoutRelationEqual
+                                                             toItem:self.viewContain
+                                                          attribute:NSLayoutAttributeTop
+                                                         multiplier:1.0
+                                                           constant:0.0]];
+    
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.pageController.view
+                                                          attribute:NSLayoutAttributeLeading
+                                                          relatedBy:NSLayoutRelationEqual
+                                                             toItem:self.viewContain
+                                                          attribute:NSLayoutAttributeLeading
+                                                         multiplier:1.0
+                                                           constant:0.0]];
+    
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.pageController.view
+                                                          attribute:NSLayoutAttributeTrailing
+                                                          relatedBy:NSLayoutRelationEqual
+                                                             toItem:self.viewContain
+                                                          attribute:NSLayoutAttributeTrailing
+                                                         multiplier:1.0
+                                                           constant:0.0]];
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.pageController.view
+                                                          attribute:NSLayoutAttributeBottom
+                                                          relatedBy:NSLayoutRelationEqual
+                                                             toItem:self.viewContain
+                                                          attribute:NSLayoutAttributeBottom
+                                                         multiplier:1.0
+                                                           constant:0.0]];
 
+}
 
 -(void)configTabbar{
-    [self.btnTabNew setTitleColor:MU_RGB(255, 255, 255) forState:UIControlStateNormal];
-    [self.btnTabNew setTitleColor:MU_RGB(0, 0, 0) forState:UIControlStateSelected];
+    [self.btnTabNew setBackgroundImage:[Helper imageWithColor:NAVIGATIONBAR_COLOR] forState:UIControlStateNormal];
+    [self.btnTabNew setBackgroundImage:[Helper imageWithColor:SELECTED_COLOR] forState:UIControlStateSelected];
     [self.btnTabNew addTarget:self action:@selector(btnTabNew:) forControlEvents:UIControlEventTouchUpInside];
     
-    [self.btnTabBookMark setTitleColor:MU_RGB(255, 255, 255) forState:UIControlStateNormal];
-    [self.btnTabBookMark setTitleColor:MU_RGB(0, 0, 0) forState:UIControlStateSelected];
+    [self.btnTabBookMark setBackgroundImage:[Helper imageWithColor:NAVIGATIONBAR_COLOR] forState:UIControlStateNormal];
+    [self.btnTabBookMark setBackgroundImage:[Helper imageWithColor:SELECTED_COLOR] forState:UIControlStateSelected];
     [self.btnTabBookMark addTarget:self action:@selector(btnTabBookMark:) forControlEvents:UIControlEventTouchUpInside];
 
-    [self.btnTabWallPaper setTitleColor:MU_RGB(255, 255, 255) forState:UIControlStateNormal];
-    [self.btnTabWallPaper setTitleColor:MU_RGB(0, 0, 0) forState:UIControlStateSelected];
+    [self.btnTabWallPaper setBackgroundImage:[Helper imageWithColor:NAVIGATIONBAR_COLOR] forState:UIControlStateNormal];
+    [self.btnTabWallPaper setBackgroundImage:[Helper imageWithColor:SELECTED_COLOR] forState:UIControlStateSelected];
     [self.btnTabWallPaper addTarget:self action:@selector(btnTabWallPaper:) forControlEvents:UIControlEventTouchUpInside];
 
-    [self.btnTabTool setTitleColor:MU_RGB(255, 255, 255) forState:UIControlStateNormal];
-    [self.btnTabTool setTitleColor:MU_RGB(0, 0, 0) forState:UIControlStateSelected];
+    [self.btnTabTool setBackgroundImage:[Helper imageWithColor:NAVIGATIONBAR_COLOR] forState:UIControlStateNormal];
+    [self.btnTabTool setBackgroundImage:[Helper imageWithColor:SELECTED_COLOR] forState:UIControlStateSelected];
     [self.btnTabTool addTarget:self action:@selector(btnTabTool:) forControlEvents:UIControlEventTouchUpInside];
 
 
@@ -201,7 +237,9 @@ static HomeViewController *sharedInstance;
 //    return currentPage;
 //}
 
-- (void)pageViewController:(UIPageViewController *)pageViewController willTransitionToViewControllers:(NSArray<UIViewController *> *)pendingViewControllers{
+//- (void)pageViewController:(UIPageViewController *)pageViewController willTransitionToViewControllers:(NSArray<UIViewController *> *)pendingViewControllers{
+- (void)pageViewController:(UIPageViewController *)pageViewController willTransitionToViewControllers:(NSArray *)pendingViewControllers{
+
     if ([[pendingViewControllers lastObject] isKindOfClass:[NewViewController class]]) {
         self.indexPendingView = 0;
 
@@ -218,7 +256,9 @@ static HomeViewController *sharedInstance;
 }
 
 // Sent when a gesture-initiated transition ends. The 'finished' parameter indicates whether the animation finished, while the 'completed' parameter indicates whether the transition completed or bailed out (if the user let go early).
-- (void)pageViewController:(UIPageViewController *)pageViewController didFinishAnimating:(BOOL)finished previousViewControllers:(NSArray<UIViewController *> *)previousViewControllers transitionCompleted:(BOOL)completed{
+//- (void)pageViewController:(UIPageViewController *)pageViewController didFinishAnimating:(BOOL)finished previousViewControllers:(NSArray<UIViewController *> *)previousViewControllers transitionCompleted:(BOOL)completed{
+- (void)pageViewController:(UIPageViewController *)pageViewController didFinishAnimating:(BOOL)finished previousViewControllers:(NSArray *)previousViewControllers transitionCompleted:(BOOL)completed{
+
     if (completed) {
         if ([[previousViewControllers firstObject] isKindOfClass:[NewViewController class]]) {
             if (self.indexPendingView > 0) {

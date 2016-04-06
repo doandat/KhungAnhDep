@@ -11,6 +11,5 @@
 @interface BookMarkViewController : BaseViewController
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
-@property (weak, nonatomic) IBOutlet UIButton *btnBack;
 
 @end

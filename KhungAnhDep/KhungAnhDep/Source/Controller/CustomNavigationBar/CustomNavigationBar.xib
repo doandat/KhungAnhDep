@@ -6,7 +6,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomNavigationBar">
             <connections>
-                <outlet property="btnBookMark" destination="zCr-DJ-Ppc" id="Udk-Sb-FUy"/>
                 <outlet property="btnMenu" destination="mPE-yY-AUj" id="qqs-u4-4UK"/>
                 <outlet property="btnReload" destination="maq-rD-aEu" id="OFa-e2-1Gu"/>
                 <outlet property="lbTitle" destination="TmZ-Ef-SUO" id="BmA-LR-G3R"/>
@@ -18,7 +17,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TmZ-Ef-SUO">
-                    <rect key="frame" x="80" y="0.0" width="160" height="45"/>
+                    <rect key="frame" x="47" y="0.0" width="226" height="45"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
@@ -48,33 +47,21 @@
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zCr-DJ-Ppc">
-                    <rect key="frame" x="248" y="11" width="23" height="23"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="23" id="6rk-nA-zpH"/>
-                        <constraint firstAttribute="width" constant="23" id="e6d-eG-DEr"/>
-                    </constraints>
-                    <state key="normal" image="favorite.png">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                </button>
             </subviews>
             <color key="backgroundColor" red="0.10588235294117647" green="0.61176470588235299" blue="0.87058823529411766" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="mPE-yY-AUj" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="6tt-44-doa"/>
-                <constraint firstItem="TmZ-Ef-SUO" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="DLu-gt-zS3"/>
+                <constraint firstItem="TmZ-Ef-SUO" firstAttribute="leading" secondItem="mPE-yY-AUj" secondAttribute="trailing" constant="2" id="DLp-N1-pOh"/>
                 <constraint firstAttribute="trailing" secondItem="QJs-pt-gvM" secondAttribute="trailing" constant="-137" id="Hop-sj-Mjf"/>
-                <constraint firstAttribute="centerY" secondItem="zCr-DJ-Ppc" secondAttribute="centerY" id="L3j-i8-STo"/>
-                <constraint firstAttribute="centerX" secondItem="TmZ-Ef-SUO" secondAttribute="centerX" id="MKi-0r-Ct3"/>
                 <constraint firstItem="QJs-pt-gvM" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="137" id="O2q-3w-Xbh"/>
-                <constraint firstAttribute="bottom" secondItem="TmZ-Ef-SUO" secondAttribute="bottom" id="PMF-q9-QsS"/>
+                <constraint firstItem="TmZ-Ef-SUO" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="QdJ-8N-u5s"/>
                 <constraint firstAttribute="trailing" secondItem="maq-rD-aEu" secondAttribute="trailing" constant="14" id="YaP-Y2-xTF"/>
                 <constraint firstAttribute="centerY" secondItem="maq-rD-aEu" secondAttribute="centerY" id="YlL-Es-WTR"/>
-                <constraint firstItem="zCr-DJ-Ppc" firstAttribute="leading" secondItem="TmZ-Ef-SUO" secondAttribute="trailing" constant="8" id="Yno-8e-LUT"/>
                 <constraint firstAttribute="bottom" secondItem="QJs-pt-gvM" secondAttribute="bottom" id="Z5V-4p-7Fe"/>
+                <constraint firstAttribute="bottom" secondItem="TmZ-Ef-SUO" secondAttribute="bottom" id="Zk8-OX-iUp"/>
                 <constraint firstItem="mPE-yY-AUj" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="dzK-ON-x39"/>
-                <constraint firstItem="maq-rD-aEu" firstAttribute="leading" secondItem="zCr-DJ-Ppc" secondAttribute="trailing" constant="12" id="qgi-nt-Kuv"/>
                 <constraint firstAttribute="bottom" secondItem="mPE-yY-AUj" secondAttribute="bottom" id="rPG-lo-uZr"/>
+                <constraint firstAttribute="centerX" secondItem="TmZ-Ef-SUO" secondAttribute="centerX" id="tlb-aZ-AKb"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="272" y="65.5"/>
@@ -82,7 +69,6 @@
     </objects>
     <resources>
         <image name="btn_menu.png" width="23" height="13"/>
-        <image name="favorite.png" width="32" height="32"/>
         <image name="reload.png" width="32" height="32"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

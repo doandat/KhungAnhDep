@@ -1,29 +1,37 @@
 //
-//  WallpaperViewController.m
+//  SubCategoryWallPaperViewController.m
 //  KhungAnhDep
 //
-//  Created by DatDV on 4/5/16.
+//  Created by DatDV on 4/6/16.
 //  Copyright (c) 2016 dd. All rights reserved.
 //
 
-#import "WallpaperViewController.h"
+#import "SubCategoryWallPaperViewController.h"
+#import "CustomNavigationBar.h"
 #import "RootViewController.h"
 #import "ItemCollectionView.h"
-#import "AddImageTextViewController.h"
-#import "SubCategoryWallPaperViewController.h"
+#import "DTheme.h"
+#import "ShowBackgroundController.h"
 
-@interface WallpaperViewController ()<UICollectionViewDelegate,UICollectionViewDataSource>
+@interface SubCategoryWallPaperViewController ()<UICollectionViewDataSource, UICollectionViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+@property (weak, nonatomic) IBOutlet CustomNavigationBar *customNavigationBar;
 
 @property (nonatomic) NSArray *arrDataSource;
 
+
 @end
 
-@implementation WallpaperViewController
+@implementation SubCategoryWallPaperViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.customNavigationBar.btnMenu addTarget:self action:@selector(btnBack:) forControlEvents:UIControlEventTouchUpInside];
+    [self.customNavigationBar.btnMenu setImage:[UIImage imageNamed:@"btn_back.png"] forState:UIControlStateNormal];
+    [self.customNavigationBar.lbTitle setText:self.dCategoryTheme.name];
+    [self.customNavigationBar.lbTitle setFont:[UIFont fontWithName:@"Roboto-Medium" size:22]];
+    
     self.collectionView.dataSource = self;
     self.collectionView.delegate = self;
     [self.collectionView registerNib:[UINib nibWithNibName:@"ItemCollectionView" bundle:[NSBundle mainBundle]]
@@ -35,12 +43,13 @@
     [Helper showViewController:activityVC inViewController:[RootViewController sharedInstance] withSize:CGSizeMake(80, 80)];
     
     [self loadData];
-    
+
 }
+
 -(void)loadData{
     self.arrDataSource = [[NSMutableArray alloc] init];
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        self.arrDataSource =[NSMutableArray arrayWithArray:[AppService getWallPaperList]];
+        self.arrDataSource =[NSMutableArray arrayWithArray:[AppService getWallPaperSubListWithId:self.dCategoryTheme.categoryThemeId page:1]];
         dispatch_async(dispatch_get_main_queue(), ^{
             [Helper removeDialogViewController:[RootViewController sharedInstance]];
             [self.collectionView reloadData];
@@ -48,6 +57,12 @@
     });
     
 }
+
+
+- (void)btnBack:(id) sender{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -63,7 +78,7 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *identifier = @"ItemCollectionIdentifier";
-    DCategoryTheme *dCategoryTheme = [self.arrDataSource objectAtIndex:indexPath.row];
+    DTheme *dTheme = [self.arrDataSource objectAtIndex:indexPath.row];
     ItemCollectionView *cell = (ItemCollectionView *)[collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
     
     if(!cell){
@@ -71,18 +86,17 @@
         cell = [nib objectAtIndex:0];
     }
     
-    [cell.imageBackgroud sd_setImageWithURL:[NSURL URLWithString: dCategoryTheme.icon] placeholderImage:[UIImage imageNamed:@"placeholder.png"]];
-    //    [cell setBackgroundColor:[UIColor redColor]];
-    [cell.lbTitle setText:dCategoryTheme.name];
+    [cell.imageBackgroud sd_setImageWithURL:[NSURL URLWithString: dTheme.thumb] placeholderImage:[UIImage imageNamed:@"placeholder.png"]];
+    [cell.viewLabel setHidden:YES];
     
     return cell;
 }
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    DCategoryTheme *dCategoryTheme = [self.arrDataSource objectAtIndex:indexPath.row];
-    SubCategoryWallPaperViewController *subCategoryWallPaper = [[SubCategoryWallPaperViewController alloc]initWithNibName:@"SubCategoryWallPaperViewController" bundle:nil];
-    subCategoryWallPaper.dCategoryTheme = dCategoryTheme;
-    [self.navigationController pushViewController:subCategoryWallPaper animated:YES];
+    DTheme *dTheme = [self.arrDataSource objectAtIndex:indexPath.row];
+    ShowBackgroundController *showBackgroundVC = [[ShowBackgroundController alloc]initWithNibName:@"ShowBackgroundController" bundle:nil];
+    showBackgroundVC.urlBackground = dTheme.link;
+    [self.navigationController pushViewController:showBackgroundVC animated:YES];
     
 }
 

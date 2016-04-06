@@ -103,9 +103,9 @@
     return arrDEffect;
 }
 
-+ (NSArray *) getEffectListHot{
++ (NSArray *) getEffectListNew{
     NSMutableArray *arrDEffect = [[NSMutableArray alloc]init];
-    NSDictionary *dicDEffect = [self getDicFromUrlString:[NSString stringWithFormat:URL_GET_HOT_LIST]];
+    NSDictionary *dicDEffect = [self getDicFromUrlString:URL_GET_NEWS_LIST];
     if (dicDEffect) {
         NSDictionary *dicDEffectList = [dicDEffect objectForKey:k_effect_list];
         if (dicDEffectList) {
@@ -158,6 +158,46 @@
         }
     }
     return arrDEffect;
+}
+
++ (NSArray *) getWallPaperList{
+    NSMutableArray *arrWallPaper = [[NSMutableArray alloc]init];
+    NSDictionary *dicWallPaper = [self getDicFromUrlString:[NSString stringWithFormat:URL_GET_CATEGORY_THEME]];
+    if (dicWallPaper) {
+        NSDictionary *dicWallPaperList = [dicWallPaper objectForKey:k_category_list];
+        if (dicWallPaperList) {
+            for (NSDictionary *dicWallPaper1 in dicWallPaperList) {
+                DCategoryTheme *categoryTheme = [[DCategoryTheme alloc] init];
+                categoryTheme.categoryThemeId = [[dicWallPaper1 objectForKey:k_id] integerValue];
+                categoryTheme.name = [dicWallPaper1 objectForKey:k_name];
+                categoryTheme.icon =[NSString stringWithFormat:@"http://apipic.yome.vn%@",[dicWallPaper1 objectForKey:k_icon]] ;
+                [arrWallPaper addObject:categoryTheme];
+                
+            }
+        }
+    }
+    return arrWallPaper;
+}
+
++ (NSArray *) getWallPaperSubListWithId:(NSInteger) wallPaperListId page:(NSInteger)page{
+    NSMutableArray *arrWallPaper = [[NSMutableArray alloc]init];
+    NSDictionary *dicWallPaper = [self getDicFromUrlString:[NSString stringWithFormat:@"%@?page=%tu&category_id=%tu",URL_GET_THEME,page,wallPaperListId]];
+    if (dicWallPaper) {
+        NSDictionary *dicWallPaperList = [dicWallPaper objectForKey:k_theme_list];
+        if (dicWallPaperList) {
+            for (NSDictionary *dicWallPaper1 in dicWallPaperList) {
+                DTheme *theme = [[DTheme alloc] init];
+                theme.categoryTheme = wallPaperListId;
+                theme.themeId = [[dicWallPaper1 objectForKey:k_id] integerValue];
+                theme.link =[NSString stringWithFormat:@"http://apipic.yome.vn%@", [dicWallPaper1 objectForKey:k_link]];
+                theme.thumb =[NSString stringWithFormat:@"http://apipic.yome.vn%@", [dicWallPaper1 objectForKey:k_thumb]];
+                [arrWallPaper addObject:theme];
+                
+            }
+        }
+    }
+    return arrWallPaper;
+
 }
 
 + (UIImage *) createPictureWithUrlString:(NSString *)urlString bodyRequest:(NSData *)bodyRequest{

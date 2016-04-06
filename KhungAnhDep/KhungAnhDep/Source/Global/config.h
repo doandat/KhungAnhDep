@@ -68,6 +68,11 @@
 #define k_input_picture @"input_picture"
 #define k_width @"width"
 #define k_height @"height"
+#define k_icon @"icon"
+#define k_link @"link"
+#define k_thumb @"thumb"
+#define k_theme_list @"theme_list"
+
 
 
 
@@ -104,6 +109,14 @@
 #define KEY_SUB_CATEGORY_NAME @"sub_category_name"
 #define KEY_AUDIO_FILE @"audio_file"
 #define KEY_SUBSCRIBED @"subscribed"
+
+
+//backgroudcolor
+#define NAVIGATIONBAR_COLOR  [UIColor colorWithRed:2/255.0 green:136/255.0 blue:209/255.0 alpha:1.0f]
+#define VIEW_COLOR  [UIColor colorWithRed:3/255.0 green:169/255.0 blue:245/255.0 alpha:1.0f]
+#define SELECTED_COLOR  [UIColor colorWithRed:40/255.0 green:169/255.0 blue:245/255.0 alpha:1.0f]
+
+#define SEPARATOR_COLOR  [UIColor colorWithRed:27/255.0f green:156/255.0f blue:222/255.0f alpha:1.0f]
 
 
 
