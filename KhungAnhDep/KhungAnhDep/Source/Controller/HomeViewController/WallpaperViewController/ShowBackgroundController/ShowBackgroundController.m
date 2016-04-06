@@ -17,6 +17,7 @@
 
 @property (weak, nonatomic) IBOutlet CustomNavigationBar *customNavigationBar;
 @property (weak, nonatomic) IBOutlet UIView *viewContain;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) UIImage *backgroundResult;
 
 
@@ -32,32 +33,9 @@
     [self.customNavigationBar.lbTitle setFont:[UIFont fontWithName:@"Roboto-Medium" size:22]];
 //    self.backgroundResult = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:self.urlBackground]]];
     
-    if (self.backgroundResult == NULL || false) {
-        UIAlertView *alertErr = [[UIAlertView alloc] initWithTitle:@"Cellular Data is turned off" message:@"Turn on cellular data or use Wi-Fi to access data" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
-        [alertErr show];
-    }else{
-        //NSLog(@"Da vao view Background Result");
-        
-        // Do any additional setup after loading the view.
-        //////NSLog(@"background result: %@",_backgroundResult);
-        float ratioWidthHeight = _backgroundResult.size.width/_backgroundResult.size.height;
-        float ratioHeightWidth = _backgroundResult.size.height/_backgroundResult.size.width;
-        UIScrollView *scrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 70, widthBounds , heightBounds-75)];
-        [scrollView setBackgroundColor:[UIColor orangeColor]];
-        UIImageView *background = [[UIImageView alloc]init];
-        [background setBackgroundColor:[UIColor blueColor]];
-        background.image = _backgroundResult;
-        if (ratioHeightWidth < (heightBounds-75)/widthBounds) {
-            [background setFrame:CGRectMake(0, 70+(heightBounds-60-ratioHeightWidth*widthBounds)/2, widthBounds, ratioHeightWidth*widthBounds)];
-            //NSLog(@"chieu rong lon hon");
-            //        [scrollView setContentSize:(CGSizeMake( _backgroundResult.size.width,_backgroundResult.size.height))];
-            
-        }else{
-            //NSLog(@"Chieu cao lon hon");
-            [background setFrame:CGRectMake((widthBounds-ratioWidthHeight*(heightBounds-75))/2, 70, ratioWidthHeight*(heightBounds-75), heightBounds-75)];
-        }
-        [self.view addSubview:background];
-    }
+    [self.imageView sd_setImageWithURL:[NSURL URLWithString:self.urlBackground] placeholderImage:[UIImage imageNamed:@"placeholder.png"] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+        NSLog(@"finish");
+    }];
 
 }
 

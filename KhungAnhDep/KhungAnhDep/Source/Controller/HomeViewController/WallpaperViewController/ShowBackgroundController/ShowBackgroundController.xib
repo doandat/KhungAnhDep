@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7706"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ShowBackgroundController">
             <connections>
                 <outlet property="customNavigationBar" destination="LqR-Lc-5gW" id="bqW-dI-WLU"/>
+                <outlet property="imageView" destination="PFm-RG-gvP" id="UuO-bG-1xO"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="viewContain" destination="smb-fN-iDl" id="sGf-dg-W9F"/>
             </connections>
@@ -25,7 +27,17 @@
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="smb-fN-iDl">
                     <rect key="frame" x="0.0" y="45" width="320" height="523"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PFm-RG-gvP">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="523"/>
+                        </imageView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="PFm-RG-gvP" secondAttribute="trailing" id="22h-9p-sl3"/>
+                        <constraint firstAttribute="bottom" secondItem="PFm-RG-gvP" secondAttribute="bottom" id="mNX-es-MYm"/>
+                        <constraint firstItem="PFm-RG-gvP" firstAttribute="top" secondItem="smb-fN-iDl" secondAttribute="top" id="o76-pE-GPk"/>
+                        <constraint firstItem="PFm-RG-gvP" firstAttribute="leading" secondItem="smb-fN-iDl" secondAttribute="leading" id="uth-5S-C6S"/>
+                    </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -41,9 +53,4 @@
             <point key="canvasLocation" x="151" y="199"/>
         </view>
     </objects>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
-    </simulatedMetricsContainer>
 </document>

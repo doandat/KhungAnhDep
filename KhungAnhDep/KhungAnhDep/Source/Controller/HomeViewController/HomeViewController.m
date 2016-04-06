@@ -116,18 +116,24 @@ static HomeViewController *sharedInstance;
 -(void)configTabbar{
     [self.btnTabNew setBackgroundImage:[Helper imageWithColor:NAVIGATIONBAR_COLOR] forState:UIControlStateNormal];
     [self.btnTabNew setBackgroundImage:[Helper imageWithColor:SELECTED_COLOR] forState:UIControlStateSelected];
+    [self.btnTabNew setTitleColor:[UIColor blackColor] forState:UIControlStateSelected];
     [self.btnTabNew addTarget:self action:@selector(btnTabNew:) forControlEvents:UIControlEventTouchUpInside];
     
     [self.btnTabBookMark setBackgroundImage:[Helper imageWithColor:NAVIGATIONBAR_COLOR] forState:UIControlStateNormal];
     [self.btnTabBookMark setBackgroundImage:[Helper imageWithColor:SELECTED_COLOR] forState:UIControlStateSelected];
+    [self.btnTabBookMark setTitleColor:[UIColor blackColor] forState:UIControlStateSelected];
     [self.btnTabBookMark addTarget:self action:@selector(btnTabBookMark:) forControlEvents:UIControlEventTouchUpInside];
 
     [self.btnTabWallPaper setBackgroundImage:[Helper imageWithColor:NAVIGATIONBAR_COLOR] forState:UIControlStateNormal];
     [self.btnTabWallPaper setBackgroundImage:[Helper imageWithColor:SELECTED_COLOR] forState:UIControlStateSelected];
+    [self.btnTabWallPaper
+     setTitleColor:[UIColor blackColor] forState:UIControlStateSelected];
     [self.btnTabWallPaper addTarget:self action:@selector(btnTabWallPaper:) forControlEvents:UIControlEventTouchUpInside];
 
     [self.btnTabTool setBackgroundImage:[Helper imageWithColor:NAVIGATIONBAR_COLOR] forState:UIControlStateNormal];
     [self.btnTabTool setBackgroundImage:[Helper imageWithColor:SELECTED_COLOR] forState:UIControlStateSelected];
+    [self.btnTabTool setTitleColor:[UIColor blackColor] forState:UIControlStateSelected];
+
     [self.btnTabTool addTarget:self action:@selector(btnTabTool:) forControlEvents:UIControlEventTouchUpInside];
 
 

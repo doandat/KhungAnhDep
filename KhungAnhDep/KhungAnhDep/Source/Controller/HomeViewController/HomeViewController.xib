@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController">
@@ -26,10 +27,6 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="45" id="SRy-bL-SjF"/>
                     </constraints>
-                </view>
-                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NKG-Rb-Cmx">
-                    <rect key="frame" x="0.0" y="45" width="320" height="473"/>
-                    <color key="backgroundColor" red="0.26274509800000001" green="0.65490196079999996" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ze0-zd-Jlc">
                     <rect key="frame" x="0.0" y="518" width="320" height="50"/>
@@ -71,7 +68,7 @@
                             </state>
                         </button>
                     </subviews>
-                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" red="0.086274509799999996" green="0.59999999999999998" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstItem="hBl-Ub-kOm" firstAttribute="leading" secondItem="ze0-zd-Jlc" secondAttribute="leading" id="4g5-An-xOM"/>
                         <constraint firstItem="mrp-yv-CNH" firstAttribute="top" secondItem="ze0-zd-Jlc" secondAttribute="top" id="E6O-4D-mBc"/>
@@ -92,6 +89,10 @@
                         <constraint firstAttribute="bottom" secondItem="hBl-Ub-kOm" secondAttribute="bottom" id="pN0-hg-bPa"/>
                     </constraints>
                 </view>
+                <view clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NKG-Rb-Cmx">
+                    <rect key="frame" x="0.0" y="47" width="320" height="473"/>
+                    <color key="backgroundColor" red="0.26274509800000001" green="0.65490196079999996" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
@@ -109,9 +110,4 @@
             <point key="canvasLocation" x="295" y="269"/>
         </view>
     </objects>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
-    </simulatedMetricsContainer>
 </document>
