@@ -34,7 +34,7 @@
     [self.navigationController.navigationBar setBarTintColor:NAVIGATIONBAR_COLOR];
     [self.navigationController.navigationBar setTintColor:[UIColor whiteColor]];
     self.navigationController.navigationBar.titleTextAttributes = [NSDictionary dictionaryWithObject:[UIColor whiteColor] forKey:NSForegroundColorAttributeName];
-    UIBarButtonItem *btnBack = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"btn_back.png"] style:UIBarButtonItemStylePlain target:self action:@selector(itemBack:)];
+    UIBarButtonItem *btnBack = [[UIBarButtonItem alloc] initWithImage:IMAGE_BACK style:UIBarButtonItemStylePlain target:self action:@selector(itemBack:)];
     self.navigationItem.leftBarButtonItem = btnBack;
     self.navigationItem.title = @"Crop Image";
     
@@ -67,7 +67,7 @@
     crop1.layer.cornerRadius = 10.0f;
     crop1.layer.borderColor = [UIColor whiteColor].CGColor;
     crop1.clipsToBounds = YES;
-    [crop1.titleLabel setFont:[UIFont systemFontOfSize:20]];
+    [crop1.titleLabel setFont:FONT_ROBOTO_MEDIUM(20)];
     
     UIButton *cancel = [[UIButton alloc]init];
     [cancel setTitle:@"Cancel" forState:UIControlStateNormal];
@@ -80,7 +80,7 @@
     cancel.layer.cornerRadius = 10.0f;
     cancel.layer.borderColor = [UIColor whiteColor].CGColor;
     cancel.clipsToBounds = YES;
-    [cancel.titleLabel setFont:[UIFont systemFontOfSize:20]];
+    [cancel.titleLabel setFont:FONT_ROBOTO_MEDIUM(20)];
     
     [self.view setBackgroundColor:MU_RGBA(255, 255, 255,0.8)];
     

@@ -74,43 +74,6 @@
 #define k_theme_list @"theme_list"
 
 
-
-
-#define KEY_ID @"id"
-#define KEY_NAME @"name"
-#define KEY_LABEL @"label"
-#define KEY_DESCRIPTION @"description"
-#define KEY_FUNCTION @"function"
-#define KEY_AVATAR @"avatar"
-#define KEY_INPUT_LINE @"input_line"
-#define KEY_TITLE @"title"
-#define KEY_WIDTH @"width"
-#define KEY_HEIGHT @"height"
-
-#define KEY_REQUIRE @"require"
-#define KEY_INPUT_PICTURE @"input_picture"
-#define KEY_LINK_IMAGE @"image"
-#define KEY_DES @"des"
-
-#define KEY_FIXED @"fixed"
-#define KEY_CONTENT @"content"
-#define KEY_SOURCE_URL @"source_url"
-#define KEY_URL_IMAGE @"url_image"
-#define KEY_CREATE_TIME @"created_time"
-#define KEY_SOURCE @"source"
-#define KEY_ICON @"icon"
-#define KEY_LINK @"link"
-#define KEY_THUMB @"thumb"
-
-#define KEY_CATEGORY_ID @"category_id"
-#define KEY_CATEGORY_LIST @"category_list"
-#define KEY_THEME_LIST @"theme_list"
-#define KEY_SUB_CATEGORY_ID @"sub_category_id"
-#define KEY_SUB_CATEGORY_NAME @"sub_category_name"
-#define KEY_AUDIO_FILE @"audio_file"
-#define KEY_SUBSCRIBED @"subscribed"
-
-
 //backgroudcolor
 #define NAVIGATIONBAR_COLOR  [UIColor colorWithRed:2/255.0 green:136/255.0 blue:209/255.0 alpha:1.0f]
 #define VIEW_COLOR  [UIColor colorWithRed:3/255.0 green:169/255.0 blue:245/255.0 alpha:1.0f]
@@ -118,6 +81,24 @@
 
 #define SEPARATOR_COLOR  [UIColor colorWithRed:27/255.0f green:156/255.0f blue:222/255.0f alpha:1.0f]
 
+//image
+#define IMAGE_BACK                  [UIImage imageNamed:@"btn_back.png"]
+#define IMAGE_CLOSE                 [UIImage imageNamed:@"close.png"]
+#define IMAGE_FAVORITE              [UIImage imageNamed:@"favorite.png"]
+#define IMAGE_FAVORITED             [UIImage imageNamed:@"favorited.png"]
+#define IMAGE_CAMERA                [UIImage imageNamed:@"camera.png"]
+#define IMAGE_ICON_DEFAUL           [UIImage imageNamed:@"icon_defaul.png"]
+#define IMAGE_ADD_PICTURE           [UIImage imageNamed:@"addpicture.png"]
+#define IMAGE_LIBRARY               [UIImage imageNamed:@"library.png"]
+#define IMAGE_RELOAD                [UIImage imageNamed:@"reload.png"]
+//#define IMAGE_BUTTON_TAKE_NOW_RESET [UIImage imageNamed:@"btn_reset_1"]
+//#define IMAGE_ICON_CALENDAR_WHITE   [UIImage imageNamed:@"icon_calendar_white"]
+//#define IMAGE_ICON_PILL_WHITE       [UIImage imageNamed:@"icon_pill_white"]
+//#define IMAGE_ICON_NOTIFICATION     [UIImage imageNamed:@"icon_notification"]
+
+//FONT
+#define FONT_ROBOTO_MEDIUM(z)  [UIFont fontWithName:@"Roboto-Regular" size:(z)]
+#define FONT_ROBOTO_REGULAR(z)  [UIFont fontWithName:@"Roboto-Regular" size:(z)]
 
 
 #endif /* config_h */

@@ -41,7 +41,7 @@
     [self.tableView setBackgroundColor:VIEW_COLOR];
     
     self.menuItems= [[NSMutableArray alloc] init];
-    [self.menuItems addObject:@"TrangChu"];
+    [self.menuItems addObject:@"Home"];
     [self.menuItems addObjectsFromArray:[AppService getDCategoryFromUrlString:URL_GET_CATEGORY]];
 }
 
@@ -75,8 +75,7 @@
     }else{
         cell.lbTitle.text = [(DCategory *)[self.menuItems objectAtIndex:indexPath.row] dCategory_name];
     }
-    [cell.imageDes setImage:[UIImage imageNamed:@
-                             "icon_defaul.png"]];
+    [cell.imageDes setImage:IMAGE_ICON_DEFAUL];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
 //    cell.contentView.backgroundColor = [UIColor colorWithRed:3/255.0f green:169/255.0f blue:245/255.0f alpha:1.0f];
     cell.contentView.backgroundColor = VIEW_COLOR;
@@ -112,7 +111,7 @@
     UIView *viewHeader = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 45)];
     UILabel *lbTitle = [[UILabel alloc]initWithFrame:CGRectMake(25, 5, self.view.frame.size.width -20, 34)];
     [lbTitle setText:@"Menu"];
-    [lbTitle setFont:[UIFont fontWithName:@"Roboto-Medium" size:30]];
+    [lbTitle setFont:FONT_ROBOTO_MEDIUM(32)];
     [lbTitle setTextColor:[UIColor whiteColor]];
     
     [viewHeader addSubview:lbTitle];

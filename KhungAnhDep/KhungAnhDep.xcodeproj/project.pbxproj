@@ -60,10 +60,6 @@
 		D9358F9B1CB354C100B59E4C /* favorited@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D9358EDC1CB354C100B59E4C /* favorited@2x.png */; };
 		D9358F9C1CB354C100B59E4C /* image.png in Resources */ = {isa = PBXBuildFile; fileRef = D9358EDD1CB354C100B59E4C /* image.png */; };
 		D9358F9D1CB354C100B59E4C /* image.png in Resources */ = {isa = PBXBuildFile; fileRef = D9358EDD1CB354C100B59E4C /* image.png */; };
-		D9358F9E1CB354C100B59E4C /* imgCell1.png in Resources */ = {isa = PBXBuildFile; fileRef = D9358EDE1CB354C100B59E4C /* imgCell1.png */; };
-		D9358F9F1CB354C100B59E4C /* imgCell1.png in Resources */ = {isa = PBXBuildFile; fileRef = D9358EDE1CB354C100B59E4C /* imgCell1.png */; };
-		D9358FA01CB354C100B59E4C /* khunganhmua.png in Resources */ = {isa = PBXBuildFile; fileRef = D9358EDF1CB354C100B59E4C /* khunganhmua.png */; };
-		D9358FA11CB354C100B59E4C /* khunganhmua.png in Resources */ = {isa = PBXBuildFile; fileRef = D9358EDF1CB354C100B59E4C /* khunganhmua.png */; };
 		D9358FA21CB354C100B59E4C /* library.png in Resources */ = {isa = PBXBuildFile; fileRef = D9358EE01CB354C100B59E4C /* library.png */; };
 		D9358FA31CB354C100B59E4C /* library.png in Resources */ = {isa = PBXBuildFile; fileRef = D9358EE01CB354C100B59E4C /* library.png */; };
 		D9358FA41CB354C100B59E4C /* library@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D9358EE11CB354C100B59E4C /* library@2x.png */; };
@@ -74,12 +70,6 @@
 		D9358FA91CB354C100B59E4C /* reload.png in Resources */ = {isa = PBXBuildFile; fileRef = D9358EE31CB354C100B59E4C /* reload.png */; };
 		D9358FAA1CB354C100B59E4C /* reload@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D9358EE41CB354C100B59E4C /* reload@2x.png */; };
 		D9358FAB1CB354C100B59E4C /* reload@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D9358EE41CB354C100B59E4C /* reload@2x.png */; };
-		D9358FAC1CB354C100B59E4C /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = D9358EE51CB354C100B59E4C /* star.png */; };
-		D9358FAD1CB354C100B59E4C /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = D9358EE51CB354C100B59E4C /* star.png */; };
-		D9358FAE1CB354C100B59E4C /* star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D9358EE61CB354C100B59E4C /* star@2x.png */; };
-		D9358FAF1CB354C100B59E4C /* star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D9358EE61CB354C100B59E4C /* star@2x.png */; };
-		D9358FB01CB354C100B59E4C /* star@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D9358EE71CB354C100B59E4C /* star@3x.png */; };
-		D9358FB11CB354C100B59E4C /* star@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D9358EE71CB354C100B59E4C /* star@3x.png */; };
 		D9358FB21CB354C100B59E4C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D9358EEC1CB354C100B59E4C /* AppDelegate.m */; };
 		D9358FB31CB354C100B59E4C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D9358EEC1CB354C100B59E4C /* AppDelegate.m */; };
 		D9358FB41CB354C100B59E4C /* AddImageTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9358EF01CB354C100B59E4C /* AddImageTextViewController.m */; };
@@ -280,6 +270,20 @@
 		D98AC1711CB4CA000063592C /* ShowBackgroundController.m in Sources */ = {isa = PBXBuildFile; fileRef = D98AC16E1CB4CA000063592C /* ShowBackgroundController.m */; };
 		D98AC1721CB4CA000063592C /* ShowBackgroundController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D98AC16F1CB4CA000063592C /* ShowBackgroundController.xib */; };
 		D98AC1731CB4CA000063592C /* ShowBackgroundController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D98AC16F1CB4CA000063592C /* ShowBackgroundController.xib */; };
+		D9991A961CB60F900043D4CD /* share.png in Resources */ = {isa = PBXBuildFile; fileRef = D9991A931CB60F900043D4CD /* share.png */; };
+		D9991A971CB60F900043D4CD /* share.png in Resources */ = {isa = PBXBuildFile; fileRef = D9991A931CB60F900043D4CD /* share.png */; };
+		D9991A981CB60F900043D4CD /* share@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D9991A941CB60F900043D4CD /* share@2x.png */; };
+		D9991A991CB60F900043D4CD /* share@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D9991A941CB60F900043D4CD /* share@2x.png */; };
+		D9991A9F1CB610110043D4CD /* icon_share01.png in Resources */ = {isa = PBXBuildFile; fileRef = D9991A9C1CB610110043D4CD /* icon_share01.png */; };
+		D9991AA01CB610110043D4CD /* icon_share01.png in Resources */ = {isa = PBXBuildFile; fileRef = D9991A9C1CB610110043D4CD /* icon_share01.png */; };
+		D9991AA11CB610110043D4CD /* icon_share01@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D9991A9D1CB610110043D4CD /* icon_share01@2x.png */; };
+		D9991AA21CB610110043D4CD /* icon_share01@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D9991A9D1CB610110043D4CD /* icon_share01@2x.png */; };
+		D9991AA31CB610110043D4CD /* icon_share01@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D9991A9E1CB610110043D4CD /* icon_share01@3x.png */; };
+		D9991AA41CB610110043D4CD /* icon_share01@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D9991A9E1CB610110043D4CD /* icon_share01@3x.png */; };
+		D9991AA71CB6137D0043D4CD /* save.png in Resources */ = {isa = PBXBuildFile; fileRef = D9991AA51CB6137D0043D4CD /* save.png */; };
+		D9991AA81CB6137D0043D4CD /* save.png in Resources */ = {isa = PBXBuildFile; fileRef = D9991AA51CB6137D0043D4CD /* save.png */; };
+		D9991AA91CB6137D0043D4CD /* save@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D9991AA61CB6137D0043D4CD /* save@2x.png */; };
+		D9991AAA1CB6137D0043D4CD /* save@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D9991AA61CB6137D0043D4CD /* save@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -332,16 +336,11 @@
 		D9358EDB1CB354C100B59E4C /* favorited.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = favorited.png; sourceTree = "<group>"; };
 		D9358EDC1CB354C100B59E4C /* favorited@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "favorited@2x.png"; sourceTree = "<group>"; };
 		D9358EDD1CB354C100B59E4C /* image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image.png; sourceTree = "<group>"; };
-		D9358EDE1CB354C100B59E4C /* imgCell1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imgCell1.png; sourceTree = "<group>"; };
-		D9358EDF1CB354C100B59E4C /* khunganhmua.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = khunganhmua.png; sourceTree = "<group>"; };
 		D9358EE01CB354C100B59E4C /* library.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = library.png; sourceTree = "<group>"; };
 		D9358EE11CB354C100B59E4C /* library@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "library@2x.png"; sourceTree = "<group>"; };
 		D9358EE21CB354C100B59E4C /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
 		D9358EE31CB354C100B59E4C /* reload.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reload.png; sourceTree = "<group>"; };
 		D9358EE41CB354C100B59E4C /* reload@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "reload@2x.png"; sourceTree = "<group>"; };
-		D9358EE51CB354C100B59E4C /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
-		D9358EE61CB354C100B59E4C /* star@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star@2x.png"; sourceTree = "<group>"; };
-		D9358EE71CB354C100B59E4C /* star@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star@3x.png"; sourceTree = "<group>"; };
 		D9358EEB1CB354C100B59E4C /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D9358EEC1CB354C100B59E4C /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		D9358EEF1CB354C100B59E4C /* AddImageTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddImageTextViewController.h; sourceTree = "<group>"; };
@@ -504,6 +503,13 @@
 		D98AC16D1CB4CA000063592C /* ShowBackgroundController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowBackgroundController.h; sourceTree = "<group>"; };
 		D98AC16E1CB4CA000063592C /* ShowBackgroundController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowBackgroundController.m; sourceTree = "<group>"; };
 		D98AC16F1CB4CA000063592C /* ShowBackgroundController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShowBackgroundController.xib; sourceTree = "<group>"; };
+		D9991A931CB60F900043D4CD /* share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = share.png; sourceTree = "<group>"; };
+		D9991A941CB60F900043D4CD /* share@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "share@2x.png"; sourceTree = "<group>"; };
+		D9991A9C1CB610110043D4CD /* icon_share01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_share01.png; sourceTree = "<group>"; };
+		D9991A9D1CB610110043D4CD /* icon_share01@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_share01@2x.png"; sourceTree = "<group>"; };
+		D9991A9E1CB610110043D4CD /* icon_share01@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_share01@3x.png"; sourceTree = "<group>"; };
+		D9991AA51CB6137D0043D4CD /* save.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = save.png; sourceTree = "<group>"; };
+		D9991AA61CB6137D0043D4CD /* save@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "save@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -627,6 +633,11 @@
 		D9358EC81CB354C100B59E4C /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				D9991AA51CB6137D0043D4CD /* save.png */,
+				D9991AA61CB6137D0043D4CD /* save@2x.png */,
+				D9991A9C1CB610110043D4CD /* icon_share01.png */,
+				D9991A9D1CB610110043D4CD /* icon_share01@2x.png */,
+				D9991A9E1CB610110043D4CD /* icon_share01@3x.png */,
 				D95202F41CB363EC00526801 /* icon_defaul.png */,
 				D9358EC91CB354C100B59E4C /* addpicture.png */,
 				D9358ECA1CB354C100B59E4C /* addpicture@2x.png */,
@@ -641,6 +652,8 @@
 				D9358ED31CB354C100B59E4C /* close.png */,
 				D9358ED41CB354C100B59E4C /* close@2x.png */,
 				D9358ED51CB354C100B59E4C /* close@3x.png */,
+				D9991A931CB60F900043D4CD /* share.png */,
+				D9991A941CB60F900043D4CD /* share@2x.png */,
 				D9358ED61CB354C100B59E4C /* Default-568h@2x.png */,
 				D9358ED71CB354C100B59E4C /* Default.png */,
 				D9358ED81CB354C100B59E4C /* Default@2x.png */,
@@ -649,16 +662,11 @@
 				D9358EDB1CB354C100B59E4C /* favorited.png */,
 				D9358EDC1CB354C100B59E4C /* favorited@2x.png */,
 				D9358EDD1CB354C100B59E4C /* image.png */,
-				D9358EDE1CB354C100B59E4C /* imgCell1.png */,
-				D9358EDF1CB354C100B59E4C /* khunganhmua.png */,
 				D9358EE01CB354C100B59E4C /* library.png */,
 				D9358EE11CB354C100B59E4C /* library@2x.png */,
 				D9358EE21CB354C100B59E4C /* placeholder.png */,
 				D9358EE31CB354C100B59E4C /* reload.png */,
 				D9358EE41CB354C100B59E4C /* reload@2x.png */,
-				D9358EE51CB354C100B59E4C /* star.png */,
-				D9358EE61CB354C100B59E4C /* star@2x.png */,
-				D9358EE71CB354C100B59E4C /* star@3x.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -1231,7 +1239,6 @@
 			files = (
 				D98AC16A1CB4C55C0063592C /* SubCategoryWallPaperViewController.xib in Resources */,
 				D95202C11CB3595300526801 /* Roboto-BoldItalic.ttf in Resources */,
-				D9358FAE1CB354C100B59E4C /* star@2x.png in Resources */,
 				D9358FD21CB354C100B59E4C /* ActivityIndicatorViewController.xib in Resources */,
 				D9358F9A1CB354C100B59E4C /* favorited@2x.png in Resources */,
 				D95202CB1CB3595300526801 /* Roboto-MediumItalic.ttf in Resources */,
@@ -1246,8 +1253,10 @@
 				D9358FA81CB354C100B59E4C /* reload.png in Resources */,
 				D95202C51CB3595300526801 /* Roboto-Light.ttf in Resources */,
 				D95202F21CB361F400526801 /* MenuTableViewCell.xib in Resources */,
+				D9991A981CB60F900043D4CD /* share@2x.png in Resources */,
 				D95202D51CB3595300526801 /* RobotoCondensed-BoldItalic.ttf in Resources */,
 				D952031D1CB37A4600526801 /* WallpaperViewController.xib in Resources */,
+				D9991AA91CB6137D0043D4CD /* save@2x.png in Resources */,
 				D95202EB1CB359F600526801 /* SideBarViewController.xib in Resources */,
 				D9358F901CB354C100B59E4C /* Default.png in Resources */,
 				D9358F8A1CB354C100B59E4C /* close@2x.png in Resources */,
@@ -1259,13 +1268,12 @@
 				D9358F801CB354C100B59E4C /* btn_menu.png in Resources */,
 				D9358F781CB354C100B59E4C /* addpicture@3x.png in Resources */,
 				D935902B1CB354DE00B59E4C /* BaseViewController.xib in Resources */,
-				D9358FA01CB354C100B59E4C /* khunganhmua.png in Resources */,
 				D95202FD1CB3656C00526801 /* CategoryViewController.xib in Resources */,
 				D9358EAC1CB3505500B59E4C /* Main.storyboard in Resources */,
-				D9358FB01CB354C100B59E4C /* star@3x.png in Resources */,
 				D9358F881CB354C100B59E4C /* close.png in Resources */,
 				D95202D11CB3595300526801 /* Roboto-ThinItalic.ttf in Resources */,
 				D95203161CB37A3400526801 /* NewViewController.xib in Resources */,
+				D9991AA11CB610110043D4CD /* icon_share01@2x.png in Resources */,
 				D95202DB1CB3595300526801 /* RobotoCondensed-LightItalic.ttf in Resources */,
 				D9358FCA1CB354C100B59E4C /* InfoViewController.xib in Resources */,
 				D9358F961CB354C100B59E4C /* favorite@2x.png in Resources */,
@@ -1281,23 +1289,25 @@
 				D9358FCE1CB354C100B59E4C /* ResultViewController.xib in Resources */,
 				D9358FDA1CB354C100B59E4C /* DialogViewController.xib in Resources */,
 				D9358F741CB354C100B59E4C /* addpicture.png in Resources */,
-				D9358FAC1CB354C100B59E4C /* star.png in Resources */,
 				D9358F7A1CB354C100B59E4C /* ava.png in Resources */,
 				D9358F761CB354C100B59E4C /* addpicture@2x.png in Resources */,
 				D95202D91CB3595300526801 /* RobotoCondensed-Light.ttf in Resources */,
 				D9358FA41CB354C100B59E4C /* library@2x.png in Resources */,
 				D9358FC61CB354C100B59E4C /* CustomNavigationBar.xib in Resources */,
 				D95202BD1CB3595300526801 /* Roboto-BlackItalic.ttf in Resources */,
+				D9991A961CB60F900043D4CD /* share.png in Resources */,
 				D9358F861CB354C100B59E4C /* camera@2x.png in Resources */,
 				D93590321CB354F800B59E4C /* RootViewController.xib in Resources */,
 				D9358F821CB354C100B59E4C /* btn_menu@2x.png in Resources */,
+				D9991AA71CB6137D0043D4CD /* save.png in Resources */,
 				D95202F51CB363EC00526801 /* icon_defaul.png in Resources */,
 				D95202BF1CB3595300526801 /* Roboto-Bold.ttf in Resources */,
+				D9991AA31CB610110043D4CD /* icon_share01@3x.png in Resources */,
 				D95202CF1CB3595300526801 /* Roboto-Thin.ttf in Resources */,
+				D9991A9F1CB610110043D4CD /* icon_share01.png in Resources */,
 				D9358F921CB354C100B59E4C /* Default@2x.png in Resources */,
 				D9358F841CB354C100B59E4C /* camera.png in Resources */,
 				D9358EAE1CB3505500B59E4C /* Images.xcassets in Resources */,
-				D9358F9E1CB354C100B59E4C /* imgCell1.png in Resources */,
 				D9358FC21CB354C100B59E4C /* CropImageViewController.xib in Resources */,
 				D9358FD61CB354C100B59E4C /* DiaLogTableViewCell.xib in Resources */,
 				D9358F9C1CB354C100B59E4C /* image.png in Resources */,
@@ -1316,21 +1326,23 @@
 				D95202CA1CB3595300526801 /* Roboto-Medium.ttf in Resources */,
 				D9358F931CB354C100B59E4C /* Default@2x.png in Resources */,
 				D9358FD31CB354C100B59E4C /* ActivityIndicatorViewController.xib in Resources */,
-				D9358F9F1CB354C100B59E4C /* imgCell1.png in Resources */,
 				D9358F9B1CB354C100B59E4C /* favorited@2x.png in Resources */,
 				D98AC16B1CB4C55C0063592C /* SubCategoryWallPaperViewController.xib in Resources */,
 				D952031E1CB37A4600526801 /* WallpaperViewController.xib in Resources */,
 				D95202C01CB3595300526801 /* Roboto-Bold.ttf in Resources */,
+				D9991AA21CB610110043D4CD /* icon_share01@2x.png in Resources */,
+				D9991AA41CB610110043D4CD /* icon_share01@3x.png in Resources */,
 				D95202CE1CB3595300526801 /* Roboto-Regular.ttf in Resources */,
 				D95202F31CB361F400526801 /* MenuTableViewCell.xib in Resources */,
 				D9358FA71CB354C100B59E4C /* placeholder.png in Resources */,
+				D9991AAA1CB6137D0043D4CD /* save@2x.png in Resources */,
 				D95202FE1CB3656C00526801 /* CategoryViewController.xib in Resources */,
 				D95203171CB37A3400526801 /* NewViewController.xib in Resources */,
+				D9991A971CB60F900043D4CD /* share.png in Resources */,
 				D9358FCB1CB354C100B59E4C /* InfoViewController.xib in Resources */,
 				D9358F7F1CB354C100B59E4C /* btn_back@2x.png in Resources */,
 				D9358FAB1CB354C100B59E4C /* reload@2x.png in Resources */,
 				D9358FDB1CB354C100B59E4C /* DialogViewController.xib in Resources */,
-				D9358FAF1CB354C100B59E4C /* star@2x.png in Resources */,
 				D95202C81CB3595300526801 /* Roboto-LightItalic.ttf in Resources */,
 				D9358F871CB354C100B59E4C /* camera@2x.png in Resources */,
 				D98AC1731CB4CA000063592C /* ShowBackgroundController.xib in Resources */,
@@ -1341,20 +1353,21 @@
 				D95202D81CB3595300526801 /* RobotoCondensed-Italic.ttf in Resources */,
 				D9358FC31CB354C100B59E4C /* CropImageViewController.xib in Resources */,
 				D9358F8B1CB354C100B59E4C /* close@2x.png in Resources */,
+				D9991AA81CB6137D0043D4CD /* save.png in Resources */,
 				D9358FC71CB354C100B59E4C /* CustomNavigationBar.xib in Resources */,
 				D9358F911CB354C100B59E4C /* Default.png in Resources */,
 				D95202DC1CB3595300526801 /* RobotoCondensed-LightItalic.ttf in Resources */,
+				D9991AA01CB610110043D4CD /* icon_share01.png in Resources */,
 				D95202E51CB359DA00526801 /* HomeViewController.xib in Resources */,
 				D9358F751CB354C100B59E4C /* addpicture.png in Resources */,
-				D9358FA11CB354C100B59E4C /* khunganhmua.png in Resources */,
 				D9358F8F1CB354C100B59E4C /* Default-568h@2x.png in Resources */,
 				D9358F7B1CB354C100B59E4C /* ava.png in Resources */,
 				B036D1A91CB4012D002107F0 /* ToolViewController.xib in Resources */,
-				D9358FB11CB354C100B59E4C /* star@3x.png in Resources */,
 				D9358F9D1CB354C100B59E4C /* image.png in Resources */,
 				D9358F8D1CB354C100B59E4C /* close@3x.png in Resources */,
 				D9358FBB1CB354C100B59E4C /* AddTextTableViewCell.xib in Resources */,
 				D95202EC1CB359F600526801 /* SideBarViewController.xib in Resources */,
+				D9991A991CB60F900043D4CD /* share@2x.png in Resources */,
 				D95202CC1CB3595300526801 /* Roboto-MediumItalic.ttf in Resources */,
 				D95202DA1CB3595300526801 /* RobotoCondensed-Light.ttf in Resources */,
 				D9358F891CB354C100B59E4C /* close.png in Resources */,
@@ -1370,7 +1383,6 @@
 				D95202BE1CB3595300526801 /* Roboto-BlackItalic.ttf in Resources */,
 				D9358FA51CB354C100B59E4C /* library@2x.png in Resources */,
 				D9358FA31CB354C100B59E4C /* library.png in Resources */,
-				D9358FAD1CB354C100B59E4C /* star.png in Resources */,
 				D935902C1CB354DE00B59E4C /* BaseViewController.xib in Resources */,
 				D9358FCF1CB354C100B59E4C /* ResultViewController.xib in Resources */,
 				D9358F971CB354C100B59E4C /* favorite@2x.png in Resources */,

@@ -114,7 +114,14 @@
   sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    CGFloat width = (([UIScreen mainScreen].bounds.size.width-10)/2>202)? ([UIScreen mainScreen].bounds.size.width-30)/4:([UIScreen mainScreen].bounds.size.width-10)/2;
-    return CGSizeMake(width, width*2/3+40);
-}
+    CGFloat availableWidthForCells = CGRectGetWidth(collectionView.frame) - 20;
+    CGFloat cellWidth;
+    if (CGRectGetWidth(collectionView.frame) >1024) {
+        cellWidth = (CGRectGetWidth(collectionView.frame)-80)/4;
+    }else if(CGRectGetWidth(collectionView.frame) >=480){
+        cellWidth = (CGRectGetWidth(collectionView.frame)-60)/3;
+    }else{
+        cellWidth = availableWidthForCells / 2;
+    }
+    return CGSizeMake(cellWidth, cellWidth*3/4);}
 @end

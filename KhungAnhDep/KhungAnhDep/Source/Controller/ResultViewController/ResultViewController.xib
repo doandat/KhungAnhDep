@@ -1,19 +1,43 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7706"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ResultViewController">
             <connections>
+                <outlet property="customNavigationBar" destination="Hd8-Va-4dE" id="I5X-Cs-Gbr"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewContain" destination="Mll-nY-AuW" id="MFh-Kk-DTc"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hd8-Va-4dE" customClass="CustomNavigationBar">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="45"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="u1C-2t-ADf"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mll-nY-AuW">
+                    <rect key="frame" x="0.0" y="45" width="320" height="523"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Mll-nY-AuW" secondAttribute="trailing" id="8nn-Wn-Io3"/>
+                <constraint firstAttribute="bottom" secondItem="Mll-nY-AuW" secondAttribute="bottom" id="9XR-xR-A81"/>
+                <constraint firstItem="Mll-nY-AuW" firstAttribute="top" secondItem="Hd8-Va-4dE" secondAttribute="bottom" id="EgX-vR-S9z"/>
+                <constraint firstItem="Mll-nY-AuW" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="P5Z-Nd-wHW"/>
+                <constraint firstAttribute="trailing" secondItem="Hd8-Va-4dE" secondAttribute="trailing" id="afq-7s-xeD"/>
+                <constraint firstItem="Hd8-Va-4dE" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="fyf-c4-nJE"/>
+                <constraint firstItem="Hd8-Va-4dE" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="so0-Xl-sLJ"/>
+            </constraints>
             <point key="canvasLocation" x="185" y="217"/>
         </view>
     </objects>

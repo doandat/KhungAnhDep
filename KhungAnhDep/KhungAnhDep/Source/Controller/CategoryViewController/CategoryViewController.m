@@ -31,7 +31,7 @@
     //custom navigationbar
     [self.customNavigationBar.btnMenu addTarget:revealController action:@selector(revealToggle:) forControlEvents:UIControlEventTouchUpInside];
     [self.customNavigationBar.lbTitle setText:self.dCategory.dCategory_name];
-    [self.customNavigationBar.lbTitle setFont:[UIFont fontWithName:@"Roboto-Medium" size:22]];
+    [self.customNavigationBar.lbTitle setFont:FONT_ROBOTO_MEDIUM(20)];
     
     self.collectionView.dataSource = self;
     self.collectionView.delegate = self;

@@ -28,9 +28,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.customNavigationBar.btnMenu addTarget:self action:@selector(btnBack:) forControlEvents:UIControlEventTouchUpInside];
-    [self.customNavigationBar.btnMenu setImage:[UIImage imageNamed:@"btn_back.png"] forState:UIControlStateNormal];
+    [self.customNavigationBar.btnMenu setImage:IMAGE_BACK forState:UIControlStateNormal];
     [self.customNavigationBar.lbTitle setText:self.dCategoryTheme.name];
-    [self.customNavigationBar.lbTitle setFont:[UIFont fontWithName:@"Roboto-Medium" size:22]];
+    [self.customNavigationBar.lbTitle setFont:FONT_ROBOTO_MEDIUM(20)];
     
     self.collectionView.dataSource = self;
     self.collectionView.delegate = self;

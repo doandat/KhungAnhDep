@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomNavigationBar">
             <connections>
                 <outlet property="btnMenu" destination="mPE-yY-AUj" id="qqs-u4-4UK"/>
                 <outlet property="btnReload" destination="maq-rD-aEu" id="OFa-e2-1Gu"/>
+                <outlet property="btnShare" destination="A3g-XB-eMa" id="3ZP-9P-ziH"/>
                 <outlet property="lbTitle" destination="TmZ-Ef-SUO" id="BmA-LR-G3R"/>
             </connections>
         </placeholder>
@@ -48,6 +48,16 @@
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                 </button>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A3g-XB-eMa">
+                    <rect key="frame" x="250" y="11" width="23" height="23"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="23" id="8gT-3y-j5b"/>
+                        <constraint firstAttribute="width" constant="23" id="RmK-JO-UTI"/>
+                    </constraints>
+                    <state key="normal" image="share.png">
+                        <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
             </subviews>
             <color key="backgroundColor" red="0.10588235294117647" green="0.61176470588235299" blue="0.87058823529411766" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
@@ -60,8 +70,10 @@
                 <constraint firstAttribute="centerY" secondItem="maq-rD-aEu" secondAttribute="centerY" id="YlL-Es-WTR"/>
                 <constraint firstAttribute="bottom" secondItem="QJs-pt-gvM" secondAttribute="bottom" id="Z5V-4p-7Fe"/>
                 <constraint firstAttribute="bottom" secondItem="TmZ-Ef-SUO" secondAttribute="bottom" id="Zk8-OX-iUp"/>
+                <constraint firstItem="A3g-XB-eMa" firstAttribute="centerY" secondItem="maq-rD-aEu" secondAttribute="centerY" id="dgu-g3-E5A"/>
                 <constraint firstItem="mPE-yY-AUj" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="dzK-ON-x39"/>
                 <constraint firstAttribute="bottom" secondItem="mPE-yY-AUj" secondAttribute="bottom" id="rPG-lo-uZr"/>
+                <constraint firstItem="maq-rD-aEu" firstAttribute="leading" secondItem="A3g-XB-eMa" secondAttribute="trailing" constant="10" id="rnd-yK-WVa"/>
                 <constraint firstAttribute="centerX" secondItem="TmZ-Ef-SUO" secondAttribute="centerX" id="tlb-aZ-AKb"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -71,5 +83,11 @@
     <resources>
         <image name="btn_menu.png" width="23" height="13"/>
         <image name="reload.png" width="32" height="32"/>
+        <image name="share.png" width="32" height="32"/>
     </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
 </document>

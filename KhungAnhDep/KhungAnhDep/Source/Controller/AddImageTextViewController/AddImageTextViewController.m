@@ -56,12 +56,12 @@
     [super viewDidLoad];
     
     [self.customNavigationBar.btnMenu addTarget:self action:@selector(btnBack:) forControlEvents:UIControlEventTouchUpInside];
-    [self.customNavigationBar.btnMenu setImage:[UIImage imageNamed:@"btn_back.png"] forState:UIControlStateNormal];
+    [self.customNavigationBar.btnMenu setImage:IMAGE_BACK forState:UIControlStateNormal];
     [self.customNavigationBar.lbTitle setText:self.dEffect.label];
-    [self.customNavigationBar.lbTitle setFont:[UIFont fontWithName:@"Roboto-Medium" size:22]];
+    [self.customNavigationBar.lbTitle setFont:FONT_ROBOTO_MEDIUM(20)];
     [self.customNavigationBar.btnReload addTarget:self action:@selector(btnBookmark:) forControlEvents:UIControlEventTouchUpInside];
-    [self.customNavigationBar.btnReload setImage:[UIImage imageNamed:@"favorite.png"] forState:UIControlStateNormal];
-    [self.customNavigationBar.btnReload setImage:[UIImage imageNamed:@"favorited.png"] forState:UIControlStateSelected];
+    [self.customNavigationBar.btnReload setImage:IMAGE_FAVORITE forState:UIControlStateNormal];
+    [self.customNavigationBar.btnReload setImage:IMAGE_FAVORITED forState:UIControlStateSelected];
     
     RLMResults *bookMark = [EffectBookMark objectsWhere:@"dEffect_id = %@",[NSString stringWithFormat:@"%@",_dEffect.dEffect_id]];
     if (bookMark.count) {
@@ -77,7 +77,7 @@
     [self.scrollView addSubview:imageView];
     
     viewContainDes = [[UIView alloc]init];
-    [viewContainDes setBackgroundColor:VIEW_COLOR];
+    [viewContainDes setBackgroundColor:MU_RGBA(204, 231, 246,1.0)];
     viewContainDes.translatesAutoresizingMaskIntoConstraints = NO;
     [self.scrollView addSubview:viewContainDes];
     
@@ -85,8 +85,8 @@
     [lbDes setText:_dEffect.effectDescription];
     [lbDes setNumberOfLines:0];
     lbDes.textAlignment = NSTextAlignmentJustified;
-    [lbDes setFont:[UIFont fontWithName:@"Helvetica Neue" size:14]];
-    [lbDes setTextColor:MU_RGBA(255, 255,255,0.9)];
+    [lbDes setFont:FONT_ROBOTO_REGULAR(14)];
+    [lbDes setTextColor:MU_RGBA(0, 0, 0, 1.0)];
     lbDes.translatesAutoresizingMaskIntoConstraints = NO;
     
     [viewContainDes addSubview:lbDes];
@@ -101,7 +101,7 @@
     if (numberInputImg) {
         lbTitleViewAddImage.text = @"Chọn ảnh ghép";
     }
-    lbTitleViewAddImage.textColor =MU_RGB(70, 6, 143);
+    lbTitleViewAddImage.textColor =MU_RGB(0, 0, 0);
     lbTitleViewAddImage.translatesAutoresizingMaskIntoConstraints = NO;
 
     [self.scrollView addSubview:lbTitleViewAddImage];
@@ -118,7 +118,7 @@
     
     
     btnOk = [[UIButton alloc]init];
-    [btnOk setBackgroundColor:MU_RGB(108,46 , 184)];
+    [btnOk setBackgroundColor:NAVIGATIONBAR_COLOR];
     btnOk.layer.cornerRadius = 6.0f;
     [btnOk setTitle:@"OK" forState:UIControlStateNormal];
     [btnOk addTarget:self action:@selector(btnOK:) forControlEvents:UIControlEventTouchUpInside];
@@ -423,8 +423,8 @@
     if (!checkInputLine) {
         
         MessageViewController *messageVC = [[MessageViewController alloc]initWithNibName:@"MessageViewController" bundle:nil];
-        messageVC.titleText = @"Message";
-        messageVC.message = @"You must fill input line. Please fill now";
+        messageVC.titleText = @"Thông báo";
+        messageVC.message = @"Bạn phải điền chữ vào ô nhập";
         messageVC.delegate = self;
         [Helper showViewController:messageVC inViewController:self withSize:CGSizeMake(300, 200)];
         
@@ -462,7 +462,7 @@
             //đặt lại dữ liệu
             for (int i = 0; i< numberInputImg; i++) {
                 UIButton *button = (UIButton *) [self.collectionViewAddImage viewWithTag:2000+i];
-                [button setBackgroundImage:[UIImage imageNamed:@"addpicture.png"] forState:UIControlStateNormal];
+                [button setBackgroundImage:IMAGE_ADD_PICTURE forState:UIControlStateNormal];
             }
             
             for (int i = 0; i < numberInputImg; i++) {
@@ -589,7 +589,7 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     UICollectionViewCell *cell=[collectionView dequeueReusableCellWithReuseIdentifier:@"cellIdentifier" forIndexPath:indexPath];
     UIButton *btnAddImage = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, heightImgAdd, heightImgAdd)];
-    [btnAddImage setBackgroundImage:[UIImage imageNamed:@"addpicture.png"] forState:UIControlStateNormal];
+    [btnAddImage setBackgroundImage:IMAGE_ADD_PICTURE forState:UIControlStateNormal];
 
     [btnAddImage addTarget:self action:@selector(btnAddImage:) forControlEvents:UIControlEventTouchUpInside];
     [btnAddImage setTag:(2000+indexPath.row)];
@@ -598,7 +598,7 @@
 ////    UIImageView *imageViewBackground = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, heightImgAdd, heightImgAdd)];
 ////    //    [imageViewBackground setBackgroundColor:[UIColor colorWithRed:19/255.0f green:19/255.0f blue:19/255.0f alpha:1.0f]];
 ////    imageViewBackground.contentMode = UIViewContentModeScaleToFill;
-////    [imageViewBackground setImage:[UIImage imageNamed:@"addpicture.png"]];
+////    [imageViewBackground setImage:IMAGE_ADD_PICTURE];
 //    [cell addSubview:imageViewBackground];
     
     return cell;
@@ -643,7 +643,7 @@
     cell.tvMessage.text = inputLine.title;
     cell.tvMessage.textColor = [UIColor grayColor];
     [cell.tvMessage setTag:(3000+indexPath.row)];
-    [cell.lbMessage setTextColor:MU_RGBA(108, 64, 184, 0.9)];
+    [cell.lbMessage setTextColor:MU_RGBA(0, 0, 0, 0.9)];
     
     return cell;
 }

@@ -14,7 +14,7 @@
     CGFloat widthBounds;
     CGFloat heightBounds;
 }
-
+@property (nonatomic) UIImage *imageResult;
 @property (weak, nonatomic) IBOutlet CustomNavigationBar *customNavigationBar;
 @property (weak, nonatomic) IBOutlet UIView *viewContain;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
@@ -28,13 +28,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.customNavigationBar.btnMenu addTarget:self action:@selector(btnBack:) forControlEvents:UIControlEventTouchUpInside];
-    [self.customNavigationBar.btnMenu setImage:[UIImage imageNamed:@"btn_back.png"] forState:UIControlStateNormal];
+    [self.customNavigationBar.btnMenu setImage:IMAGE_BACK forState:UIControlStateNormal];
     [self.customNavigationBar.lbTitle setText:@"Wall Paper"];
-    [self.customNavigationBar.lbTitle setFont:[UIFont fontWithName:@"Roboto-Medium" size:22]];
+    [self.customNavigationBar.lbTitle setFont:FONT_ROBOTO_MEDIUM(20)];
+    [self.customNavigationBar.btnShare setHidden:NO];
+    [self.customNavigationBar.btnShare addTarget:self action:@selector(btnShare:) forControlEvents:UIControlEventTouchUpInside];
+    [self.customNavigationBar.btnReload addTarget:self action:@selector(btnSave:) forControlEvents:UIControlEventTouchUpInside];
+    [self.customNavigationBar.btnReload setImage:[UIImage imageNamed:@"save.png"] forState:UIControlStateNormal];
+
 //    self.backgroundResult = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:self.urlBackground]]];
     
     [self.imageView sd_setImageWithURL:[NSURL URLWithString:self.urlBackground] placeholderImage:[UIImage imageNamed:@"placeholder.png"] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
         NSLog(@"finish");
+        self.imageResult = image;
     }];
 
 }
@@ -47,7 +53,31 @@
 - (void)btnBack:(id) sender{
     [self.navigationController popViewControllerAnimated:YES];
 }
-- (void)saveBackground:(id)sender {
+
+- (void)btnShare:(id) sender{
+    UIActivityViewController *controller =
+    [[UIActivityViewController alloc]
+     initWithActivityItems:@[self.imageResult]
+     applicationActivities:nil];
+    
+    controller.excludedActivityTypes = @[UIActivityTypePostToWeibo,
+                                         UIActivityTypeMessage,
+                                         UIActivityTypeMail,
+                                         UIActivityTypePrint,
+                                         UIActivityTypeCopyToPasteboard,
+                                         UIActivityTypeAssignToContact,
+                                         UIActivityTypeSaveToCameraRoll,
+                                         UIActivityTypeAddToReadingList,
+                                         UIActivityTypePostToFlickr,
+                                         UIActivityTypePostToVimeo,
+                                         UIActivityTypePostToTencentWeibo,
+                                         UIActivityTypeAirDrop];
+    
+    [self presentViewController:controller animated:YES completion:nil];
+}
+
+
+- (void)btnSave:(id)sender {
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         UIImageWriteToSavedPhotosAlbum(_backgroundResult, nil, nil, nil);
         ////NSLog(@"Background saved");

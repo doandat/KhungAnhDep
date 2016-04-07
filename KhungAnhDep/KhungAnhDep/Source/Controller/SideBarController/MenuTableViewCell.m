@@ -7,12 +7,13 @@
 //
 
 #import "MenuTableViewCell.h"
+#import "config.h"
 
 @implementation MenuTableViewCell
 
 - (void)awakeFromNib {
     // Initialization code
-    [_lbTitle setFont:[UIFont fontWithName:@"Roboto-Regular" size:17]];
+    [_lbTitle setFont:FONT_ROBOTO_REGULAR(17)];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

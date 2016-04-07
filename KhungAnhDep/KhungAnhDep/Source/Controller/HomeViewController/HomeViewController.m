@@ -11,6 +11,7 @@
 #import "WallpaperViewController.h"
 #import "BookMarkViewController.h"
 #import "ToolViewController.h"
+#import "RootViewController.h"
 
 @interface HomeViewController ()
 
@@ -39,7 +40,6 @@ static HomeViewController *sharedInstance;
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    [self.navigationController setNavigationBarHidden:YES];
     SWRevealViewController *revealController = [self revealViewController];
     
     [revealController panGestureRecognizer];
@@ -48,10 +48,10 @@ static HomeViewController *sharedInstance;
     //custom navigationbar
     [self.customNavigationBar.btnMenu addTarget:revealController action:@selector(revealToggle:) forControlEvents:UIControlEventTouchUpInside];
     [self.customNavigationBar.lbTitle setText:@"Home"];
-    [self.customNavigationBar.lbTitle setFont:[UIFont fontWithName:@"Roboto-Medium" size:22]];
-    [self.customNavigationBar.btnReload addTarget:self action:@selector(btnReload:) forControlEvents:UIControlEventTouchUpInside];
+    [self.customNavigationBar.lbTitle setFont:FONT_ROBOTO_MEDIUM(20)];
+    [self.customNavigationBar.btnReload addTarget:self action:@selector(reload:) forControlEvents:UIControlEventTouchUpInside];
 //    [self.customNavigationBar.btnBookMark setHidden:YES];
-//    [self.customNavigationBar.btnReload setHidden:YES];
+    [self.customNavigationBar.btnReload setHidden:YES];
     [self configTabbar];
     
     self.indexDayInArr = 0;
@@ -79,6 +79,11 @@ static HomeViewController *sharedInstance;
 
 
 }
+
+-(void)viewWillAppear:(BOOL)animated{
+    [self.navigationController setNavigationBarHidden:YES];
+}
+
 -(void)addConstraint{
     [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.pageController.view
                                                           attribute:NSLayoutAttributeTop
@@ -112,6 +117,22 @@ static HomeViewController *sharedInstance;
                                                            constant:0.0]];
 
 }
+
+- (void)reload:(id)sender {
+    ActivityIndicatorViewController *activityVC = [[ActivityIndicatorViewController alloc]initWithNibName:@"ActivityIndicatorViewController" bundle:nil];
+
+    [Helper showViewController:activityVC inViewController:[RootViewController sharedInstance] withSize:CGSizeMake(80, 80)];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        // Do something...
+        //        [self loadData:1];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [Helper removeDialogViewController:[RootViewController sharedInstance]];
+        });
+        
+    });
+    
+}
+
 
 -(void)configTabbar{
     [self.btnTabNew setBackgroundImage:[Helper imageWithColor:NAVIGATIONBAR_COLOR] forState:UIControlStateNormal];
