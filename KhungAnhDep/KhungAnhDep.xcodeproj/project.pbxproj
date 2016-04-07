@@ -284,6 +284,10 @@
 		D9991AA81CB6137D0043D4CD /* save.png in Resources */ = {isa = PBXBuildFile; fileRef = D9991AA51CB6137D0043D4CD /* save.png */; };
 		D9991AA91CB6137D0043D4CD /* save@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D9991AA61CB6137D0043D4CD /* save@2x.png */; };
 		D9991AAA1CB6137D0043D4CD /* save@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D9991AA61CB6137D0043D4CD /* save@2x.png */; };
+		D9991AAF1CB61CFB0043D4CD /* EditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9991AAD1CB61CFB0043D4CD /* EditViewController.m */; };
+		D9991AB01CB61CFB0043D4CD /* EditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9991AAD1CB61CFB0043D4CD /* EditViewController.m */; };
+		D9991AB11CB61CFB0043D4CD /* EditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9991AAE1CB61CFB0043D4CD /* EditViewController.xib */; };
+		D9991AB21CB61CFB0043D4CD /* EditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9991AAE1CB61CFB0043D4CD /* EditViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -510,6 +514,9 @@
 		D9991A9E1CB610110043D4CD /* icon_share01@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_share01@3x.png"; sourceTree = "<group>"; };
 		D9991AA51CB6137D0043D4CD /* save.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = save.png; sourceTree = "<group>"; };
 		D9991AA61CB6137D0043D4CD /* save@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "save@2x.png"; sourceTree = "<group>"; };
+		D9991AAC1CB61CFB0043D4CD /* EditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditViewController.h; sourceTree = "<group>"; };
+		D9991AAD1CB61CFB0043D4CD /* EditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditViewController.m; sourceTree = "<group>"; };
+		D9991AAE1CB61CFB0043D4CD /* EditViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -546,6 +553,7 @@
 		B036D1A21CB40114002107F0 /* ToolViewController */ = {
 			isa = PBXGroup;
 			children = (
+				D9991AAB1CB61CE90043D4CD /* EditViewController */,
 				B036D1A31CB4012D002107F0 /* ToolViewController.h */,
 				B036D1A41CB4012D002107F0 /* ToolViewController.m */,
 				B036D1A51CB4012D002107F0 /* ToolViewController.xib */,
@@ -1142,6 +1150,16 @@
 			path = ShowBackgroundController;
 			sourceTree = "<group>";
 		};
+		D9991AAB1CB61CE90043D4CD /* EditViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D9991AAC1CB61CFB0043D4CD /* EditViewController.h */,
+				D9991AAD1CB61CFB0043D4CD /* EditViewController.m */,
+				D9991AAE1CB61CFB0043D4CD /* EditViewController.xib */,
+			);
+			path = EditViewController;
+			sourceTree = "<group>";
+		};
 		E9065A7AC4DFF278904F45DF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1302,6 +1320,7 @@
 				D9991AA71CB6137D0043D4CD /* save.png in Resources */,
 				D95202F51CB363EC00526801 /* icon_defaul.png in Resources */,
 				D95202BF1CB3595300526801 /* Roboto-Bold.ttf in Resources */,
+				D9991AB11CB61CFB0043D4CD /* EditViewController.xib in Resources */,
 				D9991AA31CB610110043D4CD /* icon_share01@3x.png in Resources */,
 				D95202CF1CB3595300526801 /* Roboto-Thin.ttf in Resources */,
 				D9991A9F1CB610110043D4CD /* icon_share01.png in Resources */,
@@ -1378,6 +1397,7 @@
 				D95203061CB36E9F00526801 /* ItemCollectionView.xib in Resources */,
 				D9358FA91CB354C100B59E4C /* reload.png in Resources */,
 				D93590331CB354F800B59E4C /* RootViewController.xib in Resources */,
+				D9991AB21CB61CFB0043D4CD /* EditViewController.xib in Resources */,
 				D9358F951CB354C100B59E4C /* favorite.png in Resources */,
 				D95202BC1CB3595300526801 /* Roboto-Black.ttf in Resources */,
 				D95202BE1CB3595300526801 /* Roboto-BlackItalic.ttf in Resources */,
@@ -1556,6 +1576,7 @@
 				D98AC1701CB4CA000063592C /* ShowBackgroundController.m in Sources */,
 				D9358FE61CB354C100B59E4C /* DCategory.m in Sources */,
 				D9358FF01CB354C100B59E4C /* InputLineBookMark.m in Sources */,
+				D9991AAF1CB61CFB0043D4CD /* EditViewController.m in Sources */,
 				D9358FCC1CB354C100B59E4C /* ResultViewController.m in Sources */,
 				D9358FEC1CB354C100B59E4C /* DInputPic.m in Sources */,
 				D93590291CB354DE00B59E4C /* BaseViewController.m in Sources */,
@@ -1624,6 +1645,7 @@
 				D98AC1711CB4CA000063592C /* ShowBackgroundController.m in Sources */,
 				D9358FE71CB354C100B59E4C /* DCategory.m in Sources */,
 				D9358FF11CB354C100B59E4C /* InputLineBookMark.m in Sources */,
+				D9991AB01CB61CFB0043D4CD /* EditViewController.m in Sources */,
 				D9358FCD1CB354C100B59E4C /* ResultViewController.m in Sources */,
 				D9358FED1CB354C100B59E4C /* DInputPic.m in Sources */,
 				D935902A1CB354DE00B59E4C /* BaseViewController.m in Sources */,

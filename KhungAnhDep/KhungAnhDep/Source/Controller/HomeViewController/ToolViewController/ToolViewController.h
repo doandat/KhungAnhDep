@@ -9,5 +9,6 @@
 #import "BaseViewController.h"
 
 @interface ToolViewController : BaseViewController
+@property (weak, nonatomic) IBOutlet UIButton *btnPickImage;
 
 @end
