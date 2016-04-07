@@ -151,6 +151,7 @@
     }else{
         [self dismissViewControllerAnimated:YES completion:^{
             NSLog(@"đã lấy được ảnh");
+            [self.imageView setImage:self.imagePicker];
             
         }];
     }

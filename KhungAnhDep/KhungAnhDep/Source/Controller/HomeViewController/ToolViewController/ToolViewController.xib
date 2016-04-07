@@ -6,7 +6,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ToolViewController">
             <connections>
+                <outlet property="btnEdit" destination="eAU-wZ-H4T" id="R7b-VY-fw8"/>
                 <outlet property="btnPickImage" destination="cPw-gz-Euh" id="Zxg-gp-BwA"/>
+                <outlet property="btnSave" destination="7rS-MG-cdj" id="b6P-3y-k7p"/>
+                <outlet property="btnShare" destination="h0K-vj-pAB" id="Nqn-ki-kbj"/>
+                <outlet property="imageView" destination="AGd-eF-QRU" id="AwF-o7-CDW"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -15,16 +19,67 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cPw-gz-Euh">
-                    <rect key="frame" x="127" y="269" width="67" height="30"/>
-                    <state key="normal" title="Chọn ảnh">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xdj-uF-tvr">
+                    <rect key="frame" x="0.0" y="528" width="320" height="40"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cPw-gz-Euh">
+                            <rect key="frame" x="0.0" y="0.0" width="80" height="40"/>
+                            <state key="normal" title="Chọn ảnh">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7rS-MG-cdj">
+                            <rect key="frame" x="160" y="0.0" width="80" height="40"/>
+                            <state key="normal" title="Save">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h0K-vj-pAB">
+                            <rect key="frame" x="240" y="0.0" width="80" height="40"/>
+                            <state key="normal" title="Share">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eAU-wZ-H4T">
+                            <rect key="frame" x="80" y="0.0" width="80" height="40"/>
+                            <state key="normal" title="Edit">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.26274509800000001" green="0.65490196079999996" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="cPw-gz-Euh" secondAttribute="bottom" id="7tL-Pf-r8W"/>
+                        <constraint firstItem="eAU-wZ-H4T" firstAttribute="top" secondItem="xdj-uF-tvr" secondAttribute="top" id="AHU-U8-d0p"/>
+                        <constraint firstAttribute="bottom" secondItem="7rS-MG-cdj" secondAttribute="bottom" id="Ag2-32-hxu"/>
+                        <constraint firstItem="h0K-vj-pAB" firstAttribute="width" secondItem="cPw-gz-Euh" secondAttribute="width" id="ET2-L4-dzC"/>
+                        <constraint firstItem="h0K-vj-pAB" firstAttribute="leading" secondItem="7rS-MG-cdj" secondAttribute="trailing" id="Lcn-Tm-chg"/>
+                        <constraint firstAttribute="bottom" secondItem="eAU-wZ-H4T" secondAttribute="bottom" id="Olo-Xb-Evq"/>
+                        <constraint firstItem="h0K-vj-pAB" firstAttribute="top" secondItem="xdj-uF-tvr" secondAttribute="top" id="Qic-Up-wcX"/>
+                        <constraint firstAttribute="trailing" secondItem="h0K-vj-pAB" secondAttribute="trailing" id="Qii-bx-Ou3"/>
+                        <constraint firstItem="h0K-vj-pAB" firstAttribute="width" secondItem="eAU-wZ-H4T" secondAttribute="width" id="RKL-xp-ac0"/>
+                        <constraint firstAttribute="bottom" secondItem="h0K-vj-pAB" secondAttribute="bottom" id="Rgo-gQ-6Fo"/>
+                        <constraint firstItem="7rS-MG-cdj" firstAttribute="top" secondItem="xdj-uF-tvr" secondAttribute="top" id="Vox-Tf-4zB"/>
+                        <constraint firstItem="eAU-wZ-H4T" firstAttribute="leading" secondItem="cPw-gz-Euh" secondAttribute="trailing" id="gGb-26-0nx"/>
+                        <constraint firstItem="cPw-gz-Euh" firstAttribute="top" secondItem="xdj-uF-tvr" secondAttribute="top" id="gg1-Kx-q50"/>
+                        <constraint firstItem="cPw-gz-Euh" firstAttribute="leading" secondItem="xdj-uF-tvr" secondAttribute="leading" id="hnM-Z5-zEg"/>
+                        <constraint firstAttribute="height" constant="40" id="nXa-0m-Ksk"/>
+                        <constraint firstItem="h0K-vj-pAB" firstAttribute="width" secondItem="7rS-MG-cdj" secondAttribute="width" id="olj-6E-ShN"/>
+                        <constraint firstItem="7rS-MG-cdj" firstAttribute="leading" secondItem="eAU-wZ-H4T" secondAttribute="trailing" id="uwC-Dk-43p"/>
+                    </constraints>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AGd-eF-QRU">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="528"/>
+                </imageView>
             </subviews>
             <constraints>
-                <constraint firstAttribute="centerY" secondItem="cPw-gz-Euh" secondAttribute="centerY" id="ItJ-Vb-dPd"/>
-                <constraint firstAttribute="centerX" secondItem="cPw-gz-Euh" secondAttribute="centerX" id="xqY-26-qrT"/>
+                <constraint firstAttribute="trailing" secondItem="xdj-uF-tvr" secondAttribute="trailing" id="761-TH-gu6"/>
+                <constraint firstItem="AGd-eF-QRU" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Lnk-7H-BPp"/>
+                <constraint firstItem="AGd-eF-QRU" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="O5T-n3-bde"/>
+                <constraint firstItem="xdj-uF-tvr" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="SGY-8t-8pM"/>
+                <constraint firstItem="xdj-uF-tvr" firstAttribute="top" secondItem="AGd-eF-QRU" secondAttribute="bottom" id="lmD-PN-Auf"/>
+                <constraint firstAttribute="bottom" secondItem="xdj-uF-tvr" secondAttribute="bottom" id="qAY-Gu-CVL"/>
+                <constraint firstAttribute="trailing" secondItem="AGd-eF-QRU" secondAttribute="trailing" id="zf9-48-C98"/>
             </constraints>
             <point key="canvasLocation" x="228" y="269"/>
         </view>

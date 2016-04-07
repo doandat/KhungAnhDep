@@ -10,5 +10,9 @@
 
 @interface ToolViewController : BaseViewController
 @property (weak, nonatomic) IBOutlet UIButton *btnPickImage;
+@property (weak, nonatomic) IBOutlet UIButton *btnEdit;
+@property (weak, nonatomic) IBOutlet UIButton *btnSave;
+@property (weak, nonatomic) IBOutlet UIButton *btnShare;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
 @end
