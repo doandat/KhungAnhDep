@@ -10,8 +10,9 @@
 #import "WYPopoverController.h"
 #import "DialogViewController.h"
 #import "CropImageViewController.h"
+#import "CLImageEditor.h"
 
-@interface ToolViewController ()<WYPopoverControllerDelegate,DialogViewDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate>{
+@interface ToolViewController ()<WYPopoverControllerDelegate,DialogViewDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate,CLImageEditorDelegate, CLImageEditorTransitionDelegate, CLImageEditorThemeDelegate>{
     WYPopoverController *btnAddImagePopoverController;
     NSInteger indexSelectDialog;
 
@@ -26,11 +27,90 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.btnPickImage addTarget:self action:@selector(btnAddImage:) forControlEvents:UIControlEventTouchUpInside];
+    [self.btnEdit addTarget:self action:@selector(btnEdit:) forControlEvents:UIControlEventTouchUpInside];
+    [self.btnSave addTarget:self action:@selector(btnSave:) forControlEvents:UIControlEventTouchUpInside];
+    [self.btnShare addTarget:self action:@selector(btnShare:) forControlEvents:UIControlEventTouchUpInside];
+
+    self.imagePicker = [UIImage imageNamed:@"backgroud.png"];
+    [self.imageView setImage:self.imagePicker];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)btnEdit:(id)sender{
+    if(_imageView.image){
+        CLImageEditor *editor = [[CLImageEditor alloc] initWithImage:_imageView.image delegate:self];
+        //CLImageEditor *editor = [[CLImageEditor alloc] initWithDelegate:self];
+        
+        /*
+         NSLog(@"%@", editor.toolInfo);
+         NSLog(@"%@", editor.toolInfo.toolTreeDescription);
+         
+         CLImageToolInfo *tool = [editor.toolInfo subToolInfoWithToolName:@"CLToneCurveTool" recursive:NO];
+         tool.available = NO;
+         
+         tool = [editor.toolInfo subToolInfoWithToolName:@"CLRotateTool" recursive:YES];
+         tool.available = NO;
+         
+         tool = [editor.toolInfo subToolInfoWithToolName:@"CLHueEffect" recursive:YES];
+         tool.available = NO;
+         */
+        
+        [self presentViewController:editor animated:YES completion:nil];
+        //[editor showInViewController:self withImageView:_imageView];
+    }
+    else{
+        NSLog(@"Chua co anh");
+    }
+}
+
+- (void)btnSave:(id)sender{
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        UIImageWriteToSavedPhotosAlbum(self.imageView.image, nil, nil, nil);
+        NSLog(@"image saved");
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.view makeToast:@"Saved image"];
+        });
+    });
+
+}
+- (void)btnShare:(id)sender{
+    if(self.imageView.image){
+       
+        UIActivityViewController *activityView = [[UIActivityViewController alloc] initWithActivityItems:@[_imageView.image] applicationActivities:nil];
+        
+        activityView.excludedActivityTypes = @[UIActivityTypePostToWeibo,
+                                             UIActivityTypeMessage,
+                                             UIActivityTypeMail,
+                                             UIActivityTypePrint,
+                                             UIActivityTypeCopyToPasteboard,
+                                             UIActivityTypeAssignToContact,
+                                             UIActivityTypeSaveToCameraRoll,
+                                             UIActivityTypeAddToReadingList,
+                                             UIActivityTypePostToFlickr,
+                                             UIActivityTypePostToVimeo,
+                                             UIActivityTypePostToTencentWeibo,
+                                             UIActivityTypeAirDrop];
+        
+        [activityView setCompletionWithItemsHandler:
+                ^(NSString *activityType, BOOL completed, NSArray *returnedItems, NSError *activityError) {
+                    if(completed && [activityType isEqualToString:UIActivityTypeSaveToCameraRoll]){
+                        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Saved successfully" message:nil delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                        [alert show];
+                    }else if(completed){
+                        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Successfully" message:nil delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                        [alert show];
+
+                    }
+   
+         }];
+        
+        
+        [self presentViewController:activityView animated:YES completion:nil];
+    }
 }
 
 - (void)btnAddImage:(id)sender{
@@ -157,6 +237,21 @@
     }
     
     
+}
+
+#pragma mark- CLImageEditor delegate
+
+- (void)imageEditor:(CLImageEditor *)editor didFinishEdittingWithImage:(UIImage *)image
+{
+    _imageView.image = image;
+//    [self refreshImageView];
+    
+    [editor dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)imageEditor:(CLImageEditor *)editor willDismissWithImageView:(UIImageView *)imageView canceled:(BOOL)canceled
+{
+//    [self refreshImageView];
 }
 
 

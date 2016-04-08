@@ -13,6 +13,8 @@
 		B036D1A71CB4012D002107F0 /* ToolViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B036D1A41CB4012D002107F0 /* ToolViewController.m */; };
 		B036D1A81CB4012D002107F0 /* ToolViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B036D1A51CB4012D002107F0 /* ToolViewController.xib */; };
 		B036D1A91CB4012D002107F0 /* ToolViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B036D1A51CB4012D002107F0 /* ToolViewController.xib */; };
+		D9197DE41CB741F7004FB8ED /* backgroud.png in Resources */ = {isa = PBXBuildFile; fileRef = D9197DE31CB741F7004FB8ED /* backgroud.png */; };
+		D9197DE51CB741F7004FB8ED /* backgroud.png in Resources */ = {isa = PBXBuildFile; fileRef = D9197DE31CB741F7004FB8ED /* backgroud.png */; };
 		D9358EA31CB3505500B59E4C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D9358EA21CB3505500B59E4C /* main.m */; };
 		D9358EAC1CB3505500B59E4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9358EAA1CB3505500B59E4C /* Main.storyboard */; };
 		D9358EAE1CB3505500B59E4C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9358EAD1CB3505500B59E4C /* Images.xcassets */; };
@@ -310,6 +312,7 @@
 		B036D1A51CB4012D002107F0 /* ToolViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ToolViewController.xib; sourceTree = "<group>"; };
 		B35C5F820871D7108D440F2F /* libPods-KhungAnhDep.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KhungAnhDep.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B96FDA5943519B00B30C9BCD /* Pods-KhungAnhDep.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KhungAnhDep.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KhungAnhDep/Pods-KhungAnhDep.debug.xcconfig"; sourceTree = "<group>"; };
+		D9197DE31CB741F7004FB8ED /* backgroud.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backgroud.png; sourceTree = "<group>"; };
 		D9358E9D1CB3505500B59E4C /* KhungAnhDep.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KhungAnhDep.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9358EA11CB3505500B59E4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D9358EA21CB3505500B59E4C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -675,6 +678,7 @@
 				D9358EE21CB354C100B59E4C /* placeholder.png */,
 				D9358EE31CB354C100B59E4C /* reload.png */,
 				D9358EE41CB354C100B59E4C /* reload@2x.png */,
+				D9197DE31CB741F7004FB8ED /* backgroud.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -1273,6 +1277,7 @@
 				D95202F21CB361F400526801 /* MenuTableViewCell.xib in Resources */,
 				D9991A981CB60F900043D4CD /* share@2x.png in Resources */,
 				D95202D51CB3595300526801 /* RobotoCondensed-BoldItalic.ttf in Resources */,
+				D9197DE41CB741F7004FB8ED /* backgroud.png in Resources */,
 				D952031D1CB37A4600526801 /* WallpaperViewController.xib in Resources */,
 				D9991AA91CB6137D0043D4CD /* save@2x.png in Resources */,
 				D95202EB1CB359F600526801 /* SideBarViewController.xib in Resources */,
@@ -1414,6 +1419,7 @@
 				D9358F7D1CB354C100B59E4C /* btn_back.png in Resources */,
 				D95202D21CB3595300526801 /* Roboto-ThinItalic.ttf in Resources */,
 				D95202C41CB3595300526801 /* Roboto-Italic.ttf in Resources */,
+				D9197DE51CB741F7004FB8ED /* backgroud.png in Resources */,
 				D95203101CB37A0B00526801 /* BookMarkViewController.xib in Resources */,
 				D9358FB71CB354C100B59E4C /* AddImageTextViewController.xib in Resources */,
 				D95202F61CB363EC00526801 /* icon_defaul.png in Resources */,
