@@ -17,7 +17,7 @@
 
 #import "InputHelper.h"
 
-@interface AddImageTextViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UITableViewDataSource,UITableViewDelegate,UITextViewDelegate,WYPopoverControllerDelegate,DialogViewDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate,CropImageDelegate,MessageDelegate>{
+@interface AddImageTextViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UITableViewDataSource,UITableViewDelegate,UITextViewDelegate,WYPopoverControllerDelegate,DialogViewDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate,CropImageDelegate,MessageDelegate,UIGestureRecognizerDelegate>{
     UIImageView *imageView;
     UIView *viewContainDes;
     UILabel *lbDes;
@@ -32,6 +32,8 @@
     NSInteger indexTextViewChanging;
     NSInteger indexImageInputSelected;
     BOOL checkBookMark;
+    UITapGestureRecognizer *tapDismissKeyboard; //keyboard show: add gesture to self.view //keyboard dismiss remove gesture from self.view
+
     
 }
 @property (strong, nonatomic) UIImagePickerController *imagePickerController;
@@ -151,8 +153,31 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(_keyboardWillHideNotification:) name:UIKeyboardWillHideNotification object:nil];
     [self.view layoutIfNeeded];
     
+    // Listen for keyboard appearances and disappearances
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardDidShow:)
+                                                 name:UIKeyboardDidShowNotification
+                                               object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardDidHide:)
+                                                 name:UIKeyboardDidHideNotification
+                                               object:nil];
+
+    
+    tapDismissKeyboard = [[UITapGestureRecognizer alloc]
+                          initWithTarget:self
+                          action:@selector(dismissKeyboard)];
+
+    
 
 }
+
+- (void)dismissKeyboard {
+    [self.view endEditing:YES];
+}
+
+
 -(void)viewWillAppear:(BOOL)animated{
     [self.navigationController setNavigationBarHidden:YES];
 //    [_btnBack addTarget:self action:@selector(btnBack:) forControlEvents:UIControlEventTouchUpInside];
@@ -169,7 +194,13 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self
                                                     name:UIKeyboardWillShowNotification
                                                   object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardDidShowNotification object:nil];
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardDidHideNotification object:nil];
+    
+
 }
+
 -(void)updateViewConstraints{
     [super updateViewConstraints];
     
@@ -436,8 +467,8 @@
         
         if (([[(DInputPic*)[_dEffect.input_pic objectAtIndex:i] require] isEqualToString:@"true"])&& ([[arrImage objectAtIndex:i] isEqual:[NSNull null]])){
             MessageViewController *messageVC = [[MessageViewController alloc]initWithNibName:@"MessageViewController" bundle:nil];
-            messageVC.titleText = @"Message";
-            messageVC.message = @"You have to select a sufficient number of photographs. Please pick now";
+            messageVC.titleText = @"Thông báo";
+            messageVC.message = @"Bạn phải chọn ảnh trước khi ấn ok.";
             messageVC.delegate = self;
             [Helper showViewController:messageVC inViewController:self withSize:CGSizeMake(300, 200)];
             return;
@@ -449,7 +480,7 @@
         }
     }
     
-    NSLog(@"_params:%@",_params);
+//    NSLog(@"_params:%@",_params);
     //encode dữ liệu trước khi gửi server
     NSString *encodedDictionary = [Helper encodeDataFromDictionary:_params];
     
@@ -821,6 +852,18 @@
 - (void)_keyboardWillHideNotification:(NSNotification*)notification{
     [self.scrollView setContentSize:CGSizeMake([UIScreen mainScreen].bounds.size.width,imageView.frame.size.height+200+self.addImageView.frame.size.height+numberInputText*80)];
 }
+
+- (void)keyboardDidShow: (NSNotification *) notif{
+    
+    [self.view addGestureRecognizer:tapDismissKeyboard];
+}
+
+- (void)keyboardDidHide: (NSNotification *) notif{
+    
+    [self.view removeGestureRecognizer:tapDismissKeyboard];
+}
+
+
 - (BOOL)textViewShouldBeginEditing:(UITextView *)textView{
     indexTextViewChanging = textView.tag-3000;
     DInputLine *inputLine = [_dEffect.input_line objectAtIndex:indexTextViewChanging];
@@ -836,6 +879,7 @@
 
     return YES;
 }
+
 -(BOOL)textViewShouldEndEditing:(UITextView *)textView{
     indexTextViewChanging = textView.tag-3000;
     DInputLine *inputLine = [_dEffect.input_line objectAtIndex:indexTextViewChanging];
