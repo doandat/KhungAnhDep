@@ -606,6 +606,7 @@
             [defaultRealm commitWriteTransaction];
         }
         [self.customNavigationBar.btnReload setSelected:YES];
+        [self.view makeToast:@"Bookmarked"];
 
 
     }

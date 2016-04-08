@@ -32,7 +32,7 @@
     [self.customNavigationBar.btnMenu addTarget:revealController action:@selector(revealToggle:) forControlEvents:UIControlEventTouchUpInside];
     [self.customNavigationBar.lbTitle setText:self.dCategory.dCategory_name];
     [self.customNavigationBar.lbTitle setFont:FONT_ROBOTO_MEDIUM(20)];
-    
+    [self.customNavigationBar.btnReload addTarget:self action:@selector(btnReload:) forControlEvents:UIControlEventTouchUpInside];
     self.collectionView.dataSource = self;
     self.collectionView.delegate = self;
     [self.collectionView registerNib:[UINib nibWithNibName:@"ItemCollectionView" bundle:[NSBundle mainBundle]]
@@ -112,7 +112,10 @@
     return CGSizeMake(cellWidth, cellWidth*3/4);
 }
 
-- (void)reload:(UIButton*)button {
+- (void)btnReload:(id)sender {
+    ActivityIndicatorViewController *activityVC = [[ActivityIndicatorViewController alloc]initWithNibName:@"ActivityIndicatorViewController" bundle:nil];
+    [Helper showViewController:activityVC inViewController:[RootViewController sharedInstance] withSize:CGSizeMake(80, 80)];
+    [self loadData];
 }
 
 @end
