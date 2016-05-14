@@ -65,7 +65,7 @@
     btnShare.layer.cornerRadius = 10.0f;
     btnShare.layer.borderColor = [UIColor whiteColor].CGColor;
     btnShare.clipsToBounds = YES;
-    [btnShare.titleLabel setFont:[UIFont systemFontOfSize:20]];
+    [btnShare.titleLabel setFont:FONT_ROBOTO_MEDIUM(20)];
     
     UIButton *btnSave = [[UIButton alloc]init];
     [btnSave setTitle:@"Save" forState:UIControlStateNormal];
@@ -78,7 +78,7 @@
     btnSave.layer.cornerRadius = 10.0f;
     btnSave.layer.borderColor = [UIColor whiteColor].CGColor;
     btnSave.clipsToBounds = YES;
-    [btnSave.titleLabel setFont:[UIFont systemFontOfSize:20]];
+    [btnSave.titleLabel setFont:FONT_ROBOTO_MEDIUM(20)];
     
     [self.viewContain setBackgroundColor:MU_RGBA(255, 255, 255, 0.8)];
     

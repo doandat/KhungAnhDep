@@ -138,8 +138,6 @@
 		D9358FF71CB354C100B59E4C /* AppService.m in Sources */ = {isa = PBXBuildFile; fileRef = D9358F3B1CB354C100B59E4C /* AppService.m */; };
 		D9358FF81CB354C100B59E4C /* Cropper.m in Sources */ = {isa = PBXBuildFile; fileRef = D9358F3F1CB354C100B59E4C /* Cropper.m */; };
 		D9358FF91CB354C100B59E4C /* Cropper.m in Sources */ = {isa = PBXBuildFile; fileRef = D9358F3F1CB354C100B59E4C /* Cropper.m */; };
-		D9358FFA1CB354C100B59E4C /* InputHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D9358F421CB354C100B59E4C /* InputHelper.m */; };
-		D9358FFB1CB354C100B59E4C /* InputHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D9358F421CB354C100B59E4C /* InputHelper.m */; };
 		D9358FFC1CB354C100B59E4C /* JBWatchActivityIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = D9358F451CB354C100B59E4C /* JBWatchActivityIndicator.m */; };
 		D9358FFD1CB354C100B59E4C /* JBWatchActivityIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = D9358F451CB354C100B59E4C /* JBWatchActivityIndicator.m */; };
 		D9358FFE1CB354C100B59E4C /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = D9358F481CB354C100B59E4C /* MKAnnotationView+WebCache.m */; };
@@ -405,8 +403,6 @@
 		D9358F3B1CB354C100B59E4C /* AppService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppService.m; sourceTree = "<group>"; };
 		D9358F3E1CB354C100B59E4C /* Cropper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cropper.h; sourceTree = "<group>"; };
 		D9358F3F1CB354C100B59E4C /* Cropper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cropper.m; sourceTree = "<group>"; };
-		D9358F411CB354C100B59E4C /* InputHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputHelper.h; sourceTree = "<group>"; };
-		D9358F421CB354C100B59E4C /* InputHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputHelper.m; sourceTree = "<group>"; };
 		D9358F441CB354C100B59E4C /* JBWatchActivityIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBWatchActivityIndicator.h; sourceTree = "<group>"; };
 		D9358F451CB354C100B59E4C /* JBWatchActivityIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBWatchActivityIndicator.m; sourceTree = "<group>"; };
 		D9358F471CB354C100B59E4C /* MKAnnotationView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKAnnotationView+WebCache.h"; sourceTree = "<group>"; };
@@ -943,7 +939,6 @@
 			isa = PBXGroup;
 			children = (
 				D9358F3D1CB354C100B59E4C /* Cropper */,
-				D9358F401CB354C100B59E4C /* InputHelper */,
 				D9358F431CB354C100B59E4C /* JBWatchActivityIndicator */,
 				D9358F461CB354C100B59E4C /* SDWebImage */,
 				D9358F681CB354C100B59E4C /* SWRevealViewController */,
@@ -960,15 +955,6 @@
 				D9358F3F1CB354C100B59E4C /* Cropper.m */,
 			);
 			path = Cropper;
-			sourceTree = "<group>";
-		};
-		D9358F401CB354C100B59E4C /* InputHelper */ = {
-			isa = PBXGroup;
-			children = (
-				D9358F411CB354C100B59E4C /* InputHelper.h */,
-				D9358F421CB354C100B59E4C /* InputHelper.m */,
-			);
-			path = InputHelper;
 			sourceTree = "<group>";
 		};
 		D9358F431CB354C100B59E4C /* JBWatchActivityIndicator */ = {
@@ -1228,6 +1214,7 @@
 				TargetAttributes = {
 					D9358E9C1CB3505500B59E4C = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = B3J73ZPGVS;
 					};
 					D9358EB51CB3505500B59E4C = {
 						CreatedOnToolsVersion = 6.4;
@@ -1550,7 +1537,6 @@
 				D93590181CB354C100B59E4C /* UIImageView+HighlightedWebCache.m in Sources */,
 				D935900E1CB354C100B59E4C /* SDWebImagePrefetcher.m in Sources */,
 				D935900A1CB354C100B59E4C /* SDWebImageDownloaderOperation.m in Sources */,
-				D9358FFA1CB354C100B59E4C /* InputHelper.m in Sources */,
 				D93590081CB354C100B59E4C /* SDWebImageDownloader.m in Sources */,
 				D93590001CB354C100B59E4C /* NSData+ImageContentType.m in Sources */,
 				D98AC1621CB4BF8C0063592C /* DTheme.m in Sources */,
@@ -1619,7 +1605,6 @@
 				D93590191CB354C100B59E4C /* UIImageView+HighlightedWebCache.m in Sources */,
 				D935900F1CB354C100B59E4C /* SDWebImagePrefetcher.m in Sources */,
 				D935900B1CB354C100B59E4C /* SDWebImageDownloaderOperation.m in Sources */,
-				D9358FFB1CB354C100B59E4C /* InputHelper.m in Sources */,
 				D93590091CB354C100B59E4C /* SDWebImageDownloader.m in Sources */,
 				D93590011CB354C100B59E4C /* NSData+ImageContentType.m in Sources */,
 				D98AC1631CB4BF8C0063592C /* DTheme.m in Sources */,
@@ -1777,10 +1762,14 @@
 			baseConfigurationReference = B96FDA5943519B00B30C9BCD /* Pods-KhungAnhDep.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = KhungAnhDep/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = dd.KhungAnhDep1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -1789,10 +1778,14 @@
 			baseConfigurationReference = 9327003971C5EB6947A28BBD /* Pods-KhungAnhDep.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = KhungAnhDep/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = dd.KhungAnhDep1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

@@ -4,30 +4,40 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>CLImageEditor.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-KhungAnhDep-Realm.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>2</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Pods-KhungAnhDep.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>1</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Pods-KhungAnhDepTests.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>3</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>739D39903D15AC9C7749C15FA8DF47DF</key>
+		<key>102310D507FCE2EE76157C21FDAFE91B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B8636B50707EE006A3D8D906D7AC4CE9</key>
+		<key>6F983C994796EE2ACE18B193BFA9B0C8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7D0CC9C201F6C266651FF6CA7268352C</key>
 		<dict>
 			<key>primary</key>
 			<true/>

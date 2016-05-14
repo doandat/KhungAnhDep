@@ -97,7 +97,7 @@
 //#define IMAGE_ICON_NOTIFICATION     [UIImage imageNamed:@"icon_notification"]
 
 //FONT
-#define FONT_ROBOTO_MEDIUM(z)  [UIFont fontWithName:@"Roboto-Regular" size:(z)]
+#define FONT_ROBOTO_MEDIUM(z)  [UIFont fontWithName:@"Roboto-Medium" size:(z)]
 #define FONT_ROBOTO_REGULAR(z)  [UIFont fontWithName:@"Roboto-Regular" size:(z)]
 
 

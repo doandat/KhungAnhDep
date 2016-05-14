@@ -45,10 +45,10 @@ static RootViewController *sharedInstance;
     
     CGRect frame = self.viewContain.bounds;
     
-    if (MU_SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"7.0")) {
-                frame.origin.y = 20;
-                frame.size.height -= 20;
-    }
+//    if (MU_SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"7.0")) {
+//                frame.origin.y = 20;
+//                frame.size.height -= 20;
+//    }
     
     self.navigation.view.frame = frame;
     self.navigation.view.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;

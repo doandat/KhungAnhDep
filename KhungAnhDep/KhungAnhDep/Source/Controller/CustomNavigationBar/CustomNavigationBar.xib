@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Roboto-Medium.ttf">
+            <string>Roboto-Medium</string>
+        </mutableArray>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomNavigationBar">
             <connections>
@@ -18,42 +24,41 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TmZ-Ef-SUO">
-                    <rect key="frame" x="47" y="0.0" width="226" height="45"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <rect key="frame" x="45" y="0.0" width="235" height="45"/>
+                    <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="16"/>
                     <color key="textColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mPE-yY-AUj">
                     <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="45" id="nc6-xO-Tca"/>
-                        <constraint firstAttribute="height" constant="45" id="u1h-Od-ZO2"/>
+                        <constraint firstAttribute="width" constant="45" id="HKH-yu-v6L"/>
+                        <constraint firstAttribute="height" constant="45" id="maa-MP-htr"/>
                     </constraints>
                     <state key="normal" image="btn_menu.png"/>
                 </button>
-                <view alpha="0.20000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QJs-pt-gvM">
-                    <rect key="frame" x="137" y="44" width="320" height="1"/>
+                <view alpha="0.20000000000000001" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QJs-pt-gvM">
+                    <rect key="frame" x="8" y="1" width="94" height="2"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="1" id="7ul-7U-ELz"/>
-                    </constraints>
                 </view>
                 <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="maq-rD-aEu">
-                    <rect key="frame" x="283" y="11" width="23" height="23"/>
+                    <rect key="frame" x="280" y="3" width="40" height="40"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="23" id="Ik7-zd-4eA"/>
-                        <constraint firstAttribute="width" constant="23" id="zkt-NJ-gfi"/>
+                        <constraint firstAttribute="height" constant="40" id="eP8-az-P3k"/>
+                        <constraint firstAttribute="width" constant="40" id="kLZ-3O-RB9"/>
                     </constraints>
+                    <inset key="imageEdgeInsets" minX="8" minY="8" maxX="8" maxY="8"/>
                     <state key="normal" image="reload.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                 </button>
                 <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A3g-XB-eMa">
-                    <rect key="frame" x="250" y="11" width="23" height="23"/>
+                    <rect key="frame" x="239" y="3" width="40" height="40"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="23" id="8gT-3y-j5b"/>
-                        <constraint firstAttribute="width" constant="23" id="RmK-JO-UTI"/>
+                        <constraint firstAttribute="height" constant="40" id="3Vy-hs-ONs"/>
+                        <constraint firstAttribute="width" constant="40" id="LRK-Uk-o3w"/>
                     </constraints>
+                    <inset key="imageEdgeInsets" minX="7" minY="7" maxX="7" maxY="7"/>
                     <state key="normal" image="share.png">
                         <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -61,20 +66,17 @@
             </subviews>
             <color key="backgroundColor" red="0.10588235294117647" green="0.61176470588235299" blue="0.87058823529411766" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstItem="mPE-yY-AUj" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="6tt-44-doa"/>
-                <constraint firstItem="TmZ-Ef-SUO" firstAttribute="leading" secondItem="mPE-yY-AUj" secondAttribute="trailing" constant="2" id="DLp-N1-pOh"/>
-                <constraint firstAttribute="trailing" secondItem="QJs-pt-gvM" secondAttribute="trailing" constant="-137" id="Hop-sj-Mjf"/>
-                <constraint firstItem="QJs-pt-gvM" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="137" id="O2q-3w-Xbh"/>
-                <constraint firstItem="TmZ-Ef-SUO" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="QdJ-8N-u5s"/>
-                <constraint firstAttribute="trailing" secondItem="maq-rD-aEu" secondAttribute="trailing" constant="14" id="YaP-Y2-xTF"/>
-                <constraint firstAttribute="centerY" secondItem="maq-rD-aEu" secondAttribute="centerY" id="YlL-Es-WTR"/>
-                <constraint firstAttribute="bottom" secondItem="QJs-pt-gvM" secondAttribute="bottom" id="Z5V-4p-7Fe"/>
-                <constraint firstAttribute="bottom" secondItem="TmZ-Ef-SUO" secondAttribute="bottom" id="Zk8-OX-iUp"/>
-                <constraint firstItem="A3g-XB-eMa" firstAttribute="centerY" secondItem="maq-rD-aEu" secondAttribute="centerY" id="dgu-g3-E5A"/>
-                <constraint firstItem="mPE-yY-AUj" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="dzK-ON-x39"/>
-                <constraint firstAttribute="bottom" secondItem="mPE-yY-AUj" secondAttribute="bottom" id="rPG-lo-uZr"/>
-                <constraint firstItem="maq-rD-aEu" firstAttribute="leading" secondItem="A3g-XB-eMa" secondAttribute="trailing" constant="10" id="rnd-yK-WVa"/>
-                <constraint firstAttribute="centerX" secondItem="TmZ-Ef-SUO" secondAttribute="centerX" id="tlb-aZ-AKb"/>
+                <constraint firstItem="maq-rD-aEu" firstAttribute="leading" secondItem="A3g-XB-eMa" secondAttribute="trailing" constant="1" id="AwO-PD-iqu"/>
+                <constraint firstAttribute="trailing" secondItem="maq-rD-aEu" secondAttribute="trailing" id="Jcd-x4-ejf"/>
+                <constraint firstAttribute="bottom" secondItem="TmZ-Ef-SUO" secondAttribute="bottom" id="ODd-ZM-h0J"/>
+                <constraint firstItem="A3g-XB-eMa" firstAttribute="centerY" secondItem="mPE-yY-AUj" secondAttribute="centerY" id="c2p-P5-fcP"/>
+                <constraint firstItem="mPE-yY-AUj" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="dbY-Hh-XPb"/>
+                <constraint firstItem="maq-rD-aEu" firstAttribute="leading" secondItem="TmZ-Ef-SUO" secondAttribute="trailing" id="drh-Aj-2Zt"/>
+                <constraint firstItem="TmZ-Ef-SUO" firstAttribute="centerY" secondItem="mPE-yY-AUj" secondAttribute="centerY" id="frD-q5-odn"/>
+                <constraint firstItem="TmZ-Ef-SUO" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="hy4-a8-4Kr"/>
+                <constraint firstAttribute="bottom" secondItem="mPE-yY-AUj" secondAttribute="bottom" id="nzo-Mu-FB3"/>
+                <constraint firstItem="TmZ-Ef-SUO" firstAttribute="leading" secondItem="mPE-yY-AUj" secondAttribute="trailing" id="saw-bU-vo9"/>
+                <constraint firstItem="maq-rD-aEu" firstAttribute="centerY" secondItem="mPE-yY-AUj" secondAttribute="centerY" id="skF-xk-fhZ"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="272" y="65.5"/>
@@ -85,9 +87,4 @@
         <image name="reload.png" width="32" height="32"/>
         <image name="share.png" width="32" height="32"/>
     </resources>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
-    </simulatedMetricsContainer>
 </document>

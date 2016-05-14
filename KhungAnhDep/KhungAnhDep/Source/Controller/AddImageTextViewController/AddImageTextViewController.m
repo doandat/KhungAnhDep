@@ -15,7 +15,6 @@
 #import "ResultViewController.h"
 #import "ActivityIndicatorViewController.h"
 
-#import "InputHelper.h"
 
 @interface AddImageTextViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UITableViewDataSource,UITableViewDelegate,UITextViewDelegate,WYPopoverControllerDelegate,DialogViewDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate,CropImageDelegate,MessageDelegate,UIGestureRecognizerDelegate>{
     UIImageView *imageView;
@@ -124,6 +123,7 @@
     btnOk.layer.cornerRadius = 6.0f;
     [btnOk setTitle:@"OK" forState:UIControlStateNormal];
     [btnOk addTarget:self action:@selector(btnOK:) forControlEvents:UIControlEventTouchUpInside];
+    btnOk.titleLabel.font = FONT_ROBOTO_MEDIUM(25);
     btnOk.translatesAutoresizingMaskIntoConstraints = NO;
     [self.scrollView addSubview:btnOk];
     
